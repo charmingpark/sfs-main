@@ -163,6 +163,7 @@ vw-calc770(태블릿 사이즈size) {
       box-sizing: border-box; }
       .search.on .search_slide_out .top label {
         position: absolute;
+        left: 0;
         color: #fff; }
         .search.on .search_slide_out .top label.typing {
           animation: typing 3s steps(22), blink 0.5s step-end infinite alternate;
@@ -170,7 +171,9 @@ vw-calc770(태블릿 사이즈size) {
           overflow: hidden; }
 @keyframes typing {
   from {
-    width: 0; } }
+    width: 0; }
+  to {
+    width: 100%; } }
 @keyframes blink {
   50% {
     border-color: transparent; } }
@@ -252,7 +255,6 @@ vw-calc770(태블릿 사이즈size) {
 
 .search.on .search_slide_out,
 .menu.on .menu_slide_out {
-  z-index: 21;
   color: #fff; }
 
 .apply_to {
@@ -287,7 +289,7 @@ vw-calc770(태블릿 사이즈size) {
     height: 1px;
     background: #ffffff99;
     transform: translateX(-100%); }
-  .main_menu > ul > li > a:hover::after {
+  .main_menu > ul > li > a:hover::after, .main_menu > ul > li.on > a::after {
     transform: translateX(0); }
   .main_menu > ul ul {
     position: absolute;

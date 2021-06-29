@@ -134,8 +134,7 @@ aside,
 section,
 article,
 footer {
-  display: block;
-  animation: name duration timing-function delay iteration-count direction fill-mode; }
+  display: block; }
 
 /* scroll-Bar */
 /* width */
@@ -180,17 +179,52 @@ body {
 
 /* .max1440{width: 100%;max-width: 1440px;margin: 0 auto;} */
 /* 반응형 크기 제어  */
-.arrow {
-  display: inline-block;
-  width: 60px;
-  height: 2px;
-  background: #b20000;
-  -webkit-transition: all 0.25s;
-  -moz-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s;
-  position: relative;
-  margin: 3px 15px; }
+.fullVdo {
+  /* 제어 안되고있음 : 수정필요 */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+  .fullVdo a {
+    padding-top: 15px;
+    display: block;
+    width: 300px;
+    height: 40px;
+    display: inline-block;
+    letter-spacing: 0.5px;
+    font-family: "Raleway", sans-serif !important;
+    color: #fff; }
+    .fullVdo a em {
+      font-weight: 600; }
+  .fullVdo .arrow::after {
+    content: "";
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    background: #b20000 url(../images/SVG/full.svg) no-repeat 100%/cover;
+    right: -20px;
+    top: -16px;
+    position: absolute; }
+  .fullVdo a:hover .arrow, .fullVdo a:focus .arrow {
+    width: 85px; }
+
+.moreBtn {
+  /* TODO: 여기까지 했음 */
+  display: block;
+  height: 40px;
+  margin-top: 40px; }
+  .moreBtn .arrow {
+    display: inline-block;
+    width: 60px;
+    height: 2px;
+    background: #b20000;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+    position: relative;
+    margin: 3px 15px; }
 
 .tac {
   text-align: center; }

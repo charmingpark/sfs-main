@@ -138,14 +138,67 @@ body {
 /* .max1440{width: 100%;max-width: 1440px;margin: 0 auto;} */
 /* 반응형 크기 제어  */
 
-.arrow {
-  display: inline-block;
-  width: 60px;
-  height: 2px;
-  background: $wine;
-  @include transition (all 0.25s);
-  position: relative;
-  margin: 3px 15px;
+.fullVdo { 
+  // moreBtn과 합쳐서 만들기 : 너무 눈에 띄지 않아서 안되겠음.
+  
+  @include flex;
+  
+  a {
+    padding-top: 15px;
+    display: block;
+    width: 300px;
+    height: 40px;
+
+    display: inline-block;
+    
+    letter-spacing: 0.5px;
+    
+    font-family: $beauty;
+    color: #fff;
+    
+    em{font-weight: 600;}
+  }
+  .arrow{
+
+    &::after {
+      content: "";
+      border-radius: 50%;
+      width: 33px;
+      height: 33px;
+      background: #b20000 url(../images/SVG/full.svg) no-repeat 100% / cover;
+      right: -20px;
+      top: -16px;
+      position: absolute;
+    }
+  }
+
+  a:hover .arrow, a:focus .arrow {
+    
+      width: 85px;
+  }
+}
+
+
+
+
+.moreBtn {
+  /* TODO: 여기까지 했음 */
+  display: block;
+  height: 40px;
+  margin-top: 40px;
+
+  
+  .arrow {
+    display: inline-block;
+    width: 60px;
+    height: 2px;
+    background: $wine;
+    @include transition (all 0.25s);
+    position: relative;
+    margin: 3px 15px;
+  }
+
+
 }
 
 .tac { // title이 가운데로 쓰여야 할 때 사용

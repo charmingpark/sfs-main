@@ -325,8 +325,11 @@
   z-index: 2;
   @include transition (all 0.5s);
 
-  &:hover{ right: 0; 
-  }/* js로 focus제어 */
+  &:hover {
+    right: 0;
+  }
+
+  /* js로 focus제어 */
 
   li {
     height: 48px;
@@ -432,17 +435,6 @@
           background: no-repeat 100% / cover;
         }
 
-        .moreBtn {
-          /* TODO: 여기까지 했음 */
-          display: block;
-          height: 40px;
-          margin-top: 40px;
-
-
-        }
-
-
-
       }
 
       li:nth-of-type(1) {
@@ -472,11 +464,88 @@
     border: 1px solid #000;
     height: 660px;
     margin-bottom: 175px;
+    display: flex;
+
+    .titleBox {
+      border: 1px solid #000;
+      height: 100%;
+      width: 42%;
+      box-sizing: border-box;
+      padding: 90px 140px;
+
+      .moreBtn {
+        margin-top: 20px;
+      }
+    }
   }
 
+  #cnt2 .img,
+  #cnt3 .img {
+    border: 1px solid #000;
+    height: 100%;
+    width: 58%;
+
+  }
+
+
   #cnt3 {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
     height: 600px;
     margin-bottom: 250px;
+    border: 1px solid #000;
+
+    ul {
+      position: absolute;
+      left: 75px;
+      width: 10px;
+      border: 1px solid #000;
+      top: 50%;
+      @include translateY-50;
+
+      li {
+        width: 10px;
+        height: 10px;
+        background: #000;
+        border-radius: 50%;
+        margin: 25px 0;
+        position: relative;
+
+        span {
+          position: absolute;
+          display: inline-block;
+          left: 400%;
+          top: 50%;
+          @include translate-50;
+          width: auto;
+          height: auto;
+          border: 1px solid #000;
+          font-size: 12px; line-height: 13px; padding: 3px 7px;
+          font-weight: 800;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .titleBox {
+      border: 1px solid #000;
+      height: 100%;
+      width: 42%;
+      box-sizing: border-box;
+      padding: 90px 140px;
+
+      h2.num {
+        font-size: 130px;
+        margin-top: 80px;
+        padding-bottom: 50px;
+        font-weight: 400;
+      }
+
+      p {
+        padding-top: 35px;
+      }
+    }
   }
 
   #cnt4 {
@@ -496,7 +565,7 @@
       text-align: center;
       width: 92%;
       margin: 0 4%;
-      
+
       display: flex;
 
       li {
@@ -510,18 +579,19 @@
           height: 0;
         }
 
-        a {z-index: 2;background: rgba(64, 224, 208, 0.349);
+        a { /* poa니까 그대로 크기확장 + zindex로 제어하면 됨. */
+          background: rgba(64, 224, 208, 0.349);
           position: absolute;
           display: block;
           width: 100%;
           height: 100%;
-          
+          border: 1px solid #000;
           left: 0;
           font-size: 35px;
           text-transform: uppercase;
         }
 
-        svg {
+        svg {border: 1px solid #000;
           position: absolute;
 
           bottom: 0;
@@ -529,7 +599,7 @@
           @include translateX-50;
 
           height: 66px;
-          width: 442px;
+          width: 400px;
 
           font-family: "Raleway", sans-serif;
           font-weight: 900;
@@ -556,8 +626,10 @@
   }
 
   #cnt5 {
+    border: 1px solid #000;
     height: 615px;
     margin-bottom: 170px;
+    
   }
 
   #cnt6 {
@@ -597,7 +669,7 @@
 .md_cnt {
   position: fixed;
   z-index: 1000;
-  
+
 }
 
 #dim {
@@ -609,7 +681,7 @@
   background: rgba(0, 0, 0, .5);
 }
 
-.md_cnt{
+.md_cnt {
   visibility: hidden;
 }
 

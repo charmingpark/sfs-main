@@ -218,7 +218,7 @@ vw-calc770(태블릿 사이즈size) {
 .menu.on .menu_slide_out {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -800px;
   display: block;
   padding: 25px 60px;
   box-sizing: border-box;
@@ -365,11 +365,6 @@ vw-calc770(태블릿 사이즈size) {
           width: 100%;
           height: 270px;
           background: no-repeat 100% / cover; }
-        #PageBodyWraper #cnt1 article.view li .moreBtn {
-          /* TODO: 여기까지 했음 */
-          display: block;
-          height: 40px;
-          margin-top: 40px; }
       #PageBodyWraper #cnt1 article.view li:nth-of-type(1) {
         /* juicer를 이용해 주소로 이미지 불러오기  */ }
         #PageBodyWraper #cnt1 article.view li:nth-of-type(1) .photo {
@@ -379,10 +374,77 @@ vw-calc770(태블릿 사이즈size) {
   #PageBodyWraper #cnt2 {
     border: 1px solid #000;
     height: 660px;
-    margin-bottom: 175px; }
+    margin-bottom: 175px;
+    display: flex; }
+    #PageBodyWraper #cnt2 .titleBox {
+      border: 1px solid #000;
+      height: 100%;
+      width: 42%;
+      box-sizing: border-box;
+      padding: 90px 140px; }
+      #PageBodyWraper #cnt2 .titleBox .moreBtn {
+        margin-top: 20px; }
+  #PageBodyWraper #cnt2 .img,
+  #PageBodyWraper #cnt3 .img {
+    border: 1px solid #000;
+    height: 100%;
+    width: 58%; }
   #PageBodyWraper #cnt3 {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
     height: 600px;
-    margin-bottom: 250px; }
+    margin-bottom: 250px;
+    border: 1px solid #000; }
+    #PageBodyWraper #cnt3 ul {
+      position: absolute;
+      left: 75px;
+      width: 10px;
+      border: 1px solid #000;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      #PageBodyWraper #cnt3 ul li {
+        width: 10px;
+        height: 10px;
+        background: #000;
+        border-radius: 50%;
+        margin: 25px 0;
+        position: relative; }
+        #PageBodyWraper #cnt3 ul li span {
+          position: absolute;
+          display: inline-block;
+          left: 400%;
+          top: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          width: auto;
+          height: auto;
+          border: 1px solid #000;
+          font-size: 12px;
+          line-height: 13px;
+          padding: 3px 7px;
+          font-weight: 800;
+          border-radius: 5px; }
+    #PageBodyWraper #cnt3 .titleBox {
+      border: 1px solid #000;
+      height: 100%;
+      width: 42%;
+      box-sizing: border-box;
+      padding: 90px 140px; }
+      #PageBodyWraper #cnt3 .titleBox h2.num {
+        font-size: 130px;
+        margin-top: 80px;
+        padding-bottom: 50px;
+        font-weight: 400; }
+      #PageBodyWraper #cnt3 .titleBox p {
+        padding-top: 35px; }
   #PageBodyWraper #cnt4 {
     width: 100%;
     height: 850px;
@@ -406,16 +468,18 @@ vw-calc770(태블릿 사이즈size) {
           padding-bottom: 130%;
           height: 0; }
         #PageBodyWraper #cnt4 .grade li a {
-          z-index: 2;
+          /* poa니까 그대로 크기확장 + zindex로 제어하면 됨. */
           background: rgba(64, 224, 208, 0.349);
           position: absolute;
           display: block;
           width: 100%;
           height: 100%;
+          border: 1px solid #000;
           left: 0;
           font-size: 35px;
           text-transform: uppercase; }
         #PageBodyWraper #cnt4 .grade li svg {
+          border: 1px solid #000;
           position: absolute;
           bottom: 0;
           left: 50%;
@@ -425,7 +489,7 @@ vw-calc770(태블릿 사이즈size) {
           -ms-transform: translateX(-50%);
           transform: translateX(-50%);
           height: 66px;
-          width: 442px;
+          width: 400px;
           font-family: "Raleway", sans-serif;
           font-weight: 900;
           /* dasharray가 있으면 글씨가 안보이게됨. */
@@ -440,6 +504,7 @@ vw-calc770(태블릿 사이즈size) {
             text-transform: uppercase;
             font-size: 42px; }
   #PageBodyWraper #cnt5 {
+    border: 1px solid #000;
     height: 615px;
     margin-bottom: 170px; }
   #PageBodyWraper #cnt6 {
@@ -464,8 +529,7 @@ vw-calc770(태블릿 사이즈size) {
 #dim,
 .md_cnt {
   position: fixed;
-  z-index: 1000;
-  visibility: hidden; }
+  z-index: 1000; }
 
 #dim {
   display: none;
@@ -474,6 +538,9 @@ vw-calc770(태블릿 사이즈size) {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5); }
+
+.md_cnt {
+  visibility: hidden; }
 
 @media (min-width: 600px) {
   .headerTop {
