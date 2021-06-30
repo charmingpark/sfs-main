@@ -179,14 +179,18 @@ body {
 
 /* .max1440{width: 100%;max-width: 1440px;margin: 0 auto;} */
 /* 반응형 크기 제어  */
-.fullVdo {
+.moreBtn {
+  /* TODO: 여기까지 했음 */
+  display: block;
+  height: 40px;
+  margin-top: 40px;
   /* 제어 안되고있음 : 수정필요 */
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
-  .fullVdo a {
+  .moreBtn a {
     padding-top: 15px;
     display: block;
     width: 300px;
@@ -195,25 +199,8 @@ body {
     letter-spacing: 0.5px;
     font-family: "Raleway", sans-serif !important;
     color: #fff; }
-    .fullVdo a em {
+    .moreBtn a em {
       font-weight: 600; }
-  .fullVdo .arrow::after {
-    content: "";
-    border-radius: 50%;
-    width: 33px;
-    height: 33px;
-    background: #b20000 url(../images/SVG/full.svg) no-repeat 100%/cover;
-    right: -20px;
-    top: -16px;
-    position: absolute; }
-  .fullVdo a:hover .arrow, .fullVdo a:focus .arrow {
-    width: 85px; }
-
-.moreBtn {
-  /* TODO: 여기까지 했음 */
-  display: block;
-  height: 40px;
-  margin-top: 40px; }
   .moreBtn .arrow {
     display: inline-block;
     width: 60px;
@@ -225,6 +212,18 @@ body {
     transition: all 0.25s;
     position: relative;
     margin: 3px 15px; }
+    .moreBtn .arrow::after {
+      content: "";
+      border-radius: 50%;
+      width: 33px;
+      height: 33px;
+      background: #b20000 url(../images/SVG/full.svg) no-repeat 100%/cover;
+      right: -20px;
+      top: -16px;
+      position: absolute; }
+  .moreBtn a:hover .arrow,
+  .moreBtn a:focus .arrow {
+    width: 85px; }
 
 .tac {
   text-align: center; }
