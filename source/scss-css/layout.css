@@ -302,7 +302,9 @@ vw-calc770(태블릿 사이즈size) {
       display: block; }
 
 #PageBodyWraper {
-  bottom: 5px; }
+  bottom: 5px;
+  /* 부정선택자  :not(제외하고싶은 선택자)
+  여러개를 제외하려면 :not():not() 연결해서 사용함      */ }
   #PageBodyWraper section {
     width: 100%;
     box-sizing: border-box; }
@@ -374,20 +376,20 @@ vw-calc770(태블릿 사이즈size) {
     height: 660px;
     margin-bottom: 175px;
     display: flex; }
-    #PageBodyWraper #cnt2 .titleBox {
-      height: 100%;
-      width: 42%;
-      box-sizing: border-box;
-      padding: 90px 140px; }
-      #PageBodyWraper #cnt2 .titleBox .moreBtn {
-        margin-top: 20px; }
+  #PageBodyWraper .titleBox {
+    height: 100%;
+    width: 42%;
+    box-sizing: border-box;
+    padding: 90px 140px; }
+    #PageBodyWraper .titleBox .moreBtn {
+      margin-top: 20px; }
   #PageBodyWraper #cnt2 .img,
   #PageBodyWraper #cnt3 .img {
     height: 100%;
     width: 58%;
     border-bottom: 5px solid #b20000; }
   #PageBodyWraper #cnt2 .img {
-    background: url(../images/cnt2welcome.jpg) no-repeat 100%/cover;
+    background: url(../images/intro.jpg) no-repeat 100%/cover;
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; }
   #PageBodyWraper #cnt3 {
     position: relative;
@@ -540,7 +542,8 @@ vw-calc770(태블릿 사이즈size) {
           background-image: url(../images/Feature-Image3.jpg); }
         #PageBodyWraper #cnt4 .grade li:nth-of-type(4) a {
           background-image: url(../images/Feature-Image4.jpg); }
-        #PageBodyWraper #cnt4 .grade li a:hover, #PageBodyWraper #cnt4 .grade li a:focus {
+        #PageBodyWraper #cnt4 .grade li a:hover,
+        #PageBodyWraper #cnt4 .grade li a:focus {
           z-index: 10;
           top: -15px;
           width: 105%;
@@ -575,16 +578,82 @@ vw-calc770(태블릿 사이즈size) {
   #PageBodyWraper #cnt5 {
     border: 1px solid #000;
     height: 615px;
-    margin-bottom: 170px; }
+    margin-bottom: 170px;
+    position: relative;
+    display: flex; }
+    #PageBodyWraper #cnt5 .titleBox {
+      height: 100%;
+      width: 42%;
+      box-sizing: border-box;
+      padding: 60px 100px 0 250px; }
+      #PageBodyWraper #cnt5 .titleBox h2 {
+        margin-bottom: 50px; }
+      #PageBodyWraper #cnt5 .titleBox .moreBtn {
+        position: relative;
+        margin-top: 20px; }
+    #PageBodyWraper #cnt5 nav ul {
+      position: relative;
+      width: 300px;
+      height: 50px; }
+    #PageBodyWraper #cnt5 nav li {
+      border: 1px solid #000;
+      margin-top: 20px; }
+    #PageBodyWraper #cnt5 article.view {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 950px;
+      height: 530px;
+      border: 1px solid #241111; }
+      #PageBodyWraper #cnt5 article.view ul {
+        height: 100%; }
+      #PageBodyWraper #cnt5 article.view li {
+        height: 100%;
+        width: 410px;
+        border: 1px solid #000; }
+      #PageBodyWraper #cnt5 article.view a {
+        width: 100%;
+        height: 100%;
+        position: relative; }
+      #PageBodyWraper #cnt5 article.view div {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        border: 1px solid #000; }
+  #PageBodyWraper #cnt5 nav > ul > li > a {
+    padding: 10px 40px;
+    font-size: 23px;
+    font-weight: 500; }
+  #PageBodyWraper #cnt5 nav > ul > li:not(.gnb4):not(.gnb7) > a::before,
+  #PageBodyWraper #cnt5 nav > ul > li:not(.gnb4):not(.gnb7) > a::after {
+    content: "";
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    width: 12px;
+    height: 2px;
+    background: #fff; }
+  #PageBodyWraper #cnt5 nav > ul > li:not(.gnb4):not(.gnb7) > a::after {
+    transform: rotate(90deg);
+    transition: transform 0.5s; }
+  #PageBodyWraper #cnt5 nav > ul > li.on:not(.gnb4):not(.gnb7) > a::after {
+    transform: rotate(0deg); }
+  #PageBodyWraper #cnt5 nav ul li ul {
+    visibility: hidden;
+    overflow: hidden;
+    max-height: 0; }
+  #PageBodyWraper #cnt5 nav ul li ul li a {
+    padding: 5px 40px;
+    background: #8a3eaa; }
   #PageBodyWraper #cnt6 {
     height: 850px;
     margin-bottom: 190px; }
   #PageBodyWraper #cnt7 {
     border: 1px solid #000;
     /* 원본디자인 픽셀 그대로 가져오기 : 풋터까지 다 만들고 마지막에 제어 */
-    height: 1050px;
     padding-top: 80px;
-    margin-bottom: 280px;
     width: 100%;
     height: 1010px;
     margin-bottom: 240px; }
@@ -633,7 +702,35 @@ vw-calc770(태블릿 사이즈size) {
   #PageBodyWraper #cnt8 {
     height: 780px;
     margin-bottom: 250px;
-    background: rgba(208, 16, 16, 0.172); }
+    background: rgba(83, 16, 208, 0.172);
+    position: relative;
+    display: flex; }
+    #PageBodyWraper #cnt8 .img {
+      position: absolute;
+      top: 80px;
+      left: 120px;
+      width: 92%;
+      height: 80%;
+      border: 1px solid #000; }
+    #PageBodyWraper #cnt8 .frame {
+      width: 100%;
+      height: 100%;
+      position: relative; }
+    #PageBodyWraper #cnt8 .titleBox {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border: 1px solid #000;
+      padding: 0;
+      width: 520px;
+      height: 560px; }
+    #PageBodyWraper #cnt8 .map {
+      position: absolute;
+      right: 140px;
+      bottom: -80px;
+      width: 610px;
+      height: 470px;
+      border: 1px solid #000; }
 
 #Footer .info {
   height: 580px;

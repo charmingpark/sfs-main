@@ -466,15 +466,16 @@
     margin-bottom: 175px;
     display: flex;
 
-    .titleBox {
-      height: 100%;
-      width: 42%;
-      box-sizing: border-box;
-      padding: 90px 140px;
+  }
 
-      .moreBtn {
-        margin-top: 20px;
-      }
+  .titleBox {
+    height: 100%;
+    width: 42%;
+    box-sizing: border-box;
+    padding: 90px 140px;
+
+    .moreBtn {
+      margin-top: 20px;
     }
   }
 
@@ -487,7 +488,8 @@
   }
 
   #cnt2 .img {
-    background: url(../images/cnt2welcome.jpg) no-repeat 100% / cover; box-shadow: $shadow;
+    background: url(../images/intro.jpg) no-repeat 100% / cover;
+    box-shadow: $shadow;
   }
 
   #cnt3 {
@@ -504,11 +506,11 @@
       @include translateY-50;
 
       li.tab.active {
-        
+
 
         span:first-child {
           position: relative;
-          
+
 
           &::before {
             content: "";
@@ -562,7 +564,7 @@
 
           &::before {
             content: "";
-            
+
           }
         }
 
@@ -595,12 +597,31 @@
     width: 100%;
     height: 100%;
   }
-  .tabpanel .img{background: no-repeat 100% / cover; box-shadow: $shadow;}
-  #tabpanel1 .img{background-image: url(../images/example\ 1.jpg);}
-  #tabpanel2 .img{background-image: url(../images/students.jpg);}
-  #tabpanel3 .img{background-image: url(../images/example\ 2.jpg);}
-  #tabpanel4 .img{background-image: url(../images/example\ 3.jpg);}
-  #tabpanel5 .img{background-image: url(../images/example\ 4.jpg);}
+
+  .tabpanel .img {
+    background: no-repeat 100% / cover;
+    box-shadow: $shadow;
+  }
+
+  #tabpanel1 .img {
+    background-image: url(../images/example\ 1.jpg);
+  }
+
+  #tabpanel2 .img {
+    background-image: url(../images/students.jpg);
+  }
+
+  #tabpanel3 .img {
+    background-image: url(../images/example\ 2.jpg);
+  }
+
+  #tabpanel4 .img {
+    background-image: url(../images/example\ 3.jpg);
+  }
+
+  #tabpanel5 .img {
+    background-image: url(../images/example\ 4.jpg);
+  }
 
   .titleBox {
     height: 100%;
@@ -662,18 +683,31 @@
           left: 0;
           font-size: 35px;
           text-transform: uppercase;
-        opacity: 0.4;
-        @include transition (all ease-in-out 0.3s);
+          opacity: 0.4;
+          @include transition (all ease-in-out 0.3s);
         }
-        &:nth-of-type(1) a{background-image: url(../images/Feature-Image1.jpg);}
-        &:nth-of-type(2) a{background-image: url(../images/Feature-Image2.jpg);}
-        &:nth-of-type(3) a{background-image: url(../images/Feature-Image3.jpg);}
-        &:nth-of-type(4) a{background-image: url(../images/Feature-Image4.jpg);}
+
+        &:nth-of-type(1) a {
+          background-image: url(../images/Feature-Image1.jpg);
+        }
+
+        &:nth-of-type(2) a {
+          background-image: url(../images/Feature-Image2.jpg);
+        }
+
+        &:nth-of-type(3) a {
+          background-image: url(../images/Feature-Image3.jpg);
+        }
+
+        &:nth-of-type(4) a {
+          background-image: url(../images/Feature-Image4.jpg);
+        }
 
 
-        a:hover, a:focus{
+        a:hover,
+        a:focus {
           z-index: 10;
-          top:-15px;
+          top: -15px;
           width: 105%;
           height: 105%;
           opacity: 1;
@@ -719,8 +753,120 @@
     border: 1px solid #000;
     height: 615px;
     margin-bottom: 170px;
+    position: relative;
+    display: flex;
+
+    .titleBox {
+      height: 100%;
+      width: 42%;
+      box-sizing: border-box;
+      padding: 60px 100px 0 250px;
+
+      h2 {
+        margin-bottom: 50px;
+      }
+
+      .moreBtn {
+        position: relative;
+        margin-top: 20px;
+      }
+    }
+
+    nav {
+      ul {
+        position: relative;
+        width: 300px;
+        height: 50px;
+      }
+
+      li {
+        border: 1px solid #000;
+        margin-top: 20px;
+      }
+    }
+
+    article.view {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 950px;
+      height: 530px;
+      border: 1px solid rgb(36, 17, 17);
+
+      ul {
+        height: 100%;
+      }
+
+      li {
+        height: 100%;
+        width: 410px;
+        border: 1px solid #000;
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      div {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        border: 1px solid #000;
+      }
+
+    }
 
   }
+
+  // #cnt5 nav a{display: block; padding-left: 15px; /* line-height: 48px; font-size: 23px; */}
+  #cnt5 nav>ul>li>a {
+    padding: 10px 40px;
+    font-size: 23px;
+    font-weight: 500;
+  }
+
+  /* 부정선택자  :not(제외하고싶은 선택자)
+  여러개를 제외하려면 :not():not() 연결해서 사용함      */
+  #cnt5 nav>ul>li:not(.gnb4):not(.gnb7)>a::before,
+  #cnt5 nav>ul>li:not(.gnb4):not(.gnb7)>a::after {
+    content: "";
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    width: 12px;
+    height: 2px;
+    background: #fff;
+  }
+
+  #cnt5 nav>ul>li:not(.gnb4):not(.gnb7)>a::after {
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+  }
+
+  #cnt5 nav>ul>li.on:not(.gnb4):not(.gnb7)>a::after {
+    transform: rotate(0deg);
+  }
+
+  #cnt5 nav ul li ul {
+    visibility: hidden;
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  #cnt5 nav ul li ul li a {
+    padding: 5px 40px;
+    background: #8a3eaa;
+  }
+
+
+
+
+
+
 
   #cnt6 {
     height: 850px;
@@ -732,48 +878,89 @@
     border: 1px solid #000;
     //background: $midnight;
     /* 원본디자인 픽셀 그대로 가져오기 : 풋터까지 다 만들고 마지막에 제어 */
-    height: 1050px;
     padding-top: 80px;
-    margin-bottom: 280px;
     width: 100%;
-    height:1010px;
+    height: 1010px;
     margin-bottom: 240px;
 
     .title {
-      
+
       color: #fff !important;
       width: 100%;
       box-sizing: border-box;
       height: 200px;
-      h2{ color: #fff !important;
-      &::after{background: #fff;}}
+
+      h2 {
+        color: #fff !important;
+
+        &::after {
+          background: #fff;
+        }
+      }
     }
-    article{
-      width: 100%;overflow: hidden;
-      height: 570px;position: relative;
-      ul{height: 100%; width: 5050px;
+
+    article {
+      width: 100%;
+      overflow: hidden;
+      height: 570px;
+      position: relative;
+
+      ul {
+        height: 100%;
+        width: 5050px;
         position: absolute;
         left: -565px;
         display: flex;
         justify-content: space-between;
 
-        li{border: 1px solid #000; height: 100%; width: 950px; margin: 0 30px;
-          a{display: block; width: 100%;height: 100%;display: flex;}
-        .img{width: 60%;height: 100%;box-sizing: border-box;border: 1px solid #0f0;}
-        .txtBox{width: 40%;height: 100%;
-        border: 1px solid #f00;box-sizing: border-box;padding: 50px;}
+        li {
+          border: 1px solid #000;
+          height: 100%;
+          width: 950px;
+          margin: 0 30px;
+
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex;
+          }
+
+          .img {
+            width: 60%;
+            height: 100%;
+            box-sizing: border-box;
+            border: 1px solid #0f0;
+          }
+
+          .txtBox {
+            width: 40%;
+            height: 100%;
+            border: 1px solid #f00;
+            box-sizing: border-box;
+            padding: 50px;
+          }
         }
-        
+
       }
     }
-    
 
   }
+
+
+
 
   #cnt8 {
     height: 780px;
     margin-bottom: 250px;
-    background: rgba(208, 16, 16, 0.172);
+    background: rgba(83, 16, 208, 0.172);
+    position: relative;
+    display: flex;
+    .img{position: absolute;
+      top: 80px;left: 120px;width: 92%;height: 80%;border: 1px solid #000;}
+      .frame{width: 100%;height: 100%;position: relative;}
+      .titleBox{position: absolute;bottom: 0;left: 0; border: 1px solid #000;padding: 0;width: 520px;height: 560px;}
+      .map{position: absolute;right: 140px; bottom: -80px; width: 610px;height: 470px;border: 1px solid #000;}
   }
 }
 
