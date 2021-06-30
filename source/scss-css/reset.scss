@@ -137,6 +137,22 @@ body {
 
 /* .max1440{width: 100%;max-width: 1440px;margin: 0 auto;} */
 /* 반응형 크기 제어  */
+.fullVdo.moreBtn{
+  a{color: #fff;}
+  .arrow{background: $wine;
+  
+    &::after {
+      content: "";
+      border-radius: 50%;
+      width: 33px;
+      height: 33px;
+      background: #b20000 url(../images/SVG/full.svg) no-repeat 100% / cover;
+      right: -20px;
+      top: -16px;
+      position: absolute;
+    }
+  }
+}
 
 
 .moreBtn {
@@ -145,25 +161,35 @@ body {
   height: 40px;
   margin-top: 40px;
   @include flex;
+  position: relative;
 
   a {
+    display: inline-block;font-weight: 600;
     padding-top: 15px;
     display: block;
     width: 300px;
     height: 40px;
-
     display: inline-block;
 
     letter-spacing: 0.5px;
 
     font-family: $beauty;
-    color: #fff;
-
+    font-size: 16px;
     em {
-      font-weight: 600;
+      font-weight: 800;
     }
   }
+  .wht{font-weight: 400; color: #fff;em {
+      font-weight: 600;
+    }}
 
+  /* 
+  
+  TODO: moreBtn arrowR fullVdo 수정바람 
+  겉보기엔 괜찮아도 상태 좋지 않음..
+  a태그의 내용이 길어져도 옆에 있어야 함.
+
+  */  
   .arrow {
     display: inline-block;
     width: 60px;
@@ -184,13 +210,21 @@ body {
       position: absolute;
     }
   }
-
   a:hover .arrow,
   a:focus .arrow {
-
     width: 85px;
   }
+  
 
+  .arrowR{
+  &::after{content: ""; position: absolute; display: block;
+    top: 10px;left: 130px; width: 65px;height: 35px;
+  background: url(../images/SVG/arrow+circle.svg) no-repeat 100% / cover; @include transition (all 0.25s);}
+  &:hover, &:focus{
+    &::after{left: 180px;}
+  }
+}
+  
 }
 
 .tac {
@@ -202,7 +236,7 @@ body {
     margin: 0 auto;
   }
 }
-
+.after::after{border: 4px solid $wine;}
 
 .title {
   width: 100%;
