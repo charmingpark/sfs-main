@@ -391,12 +391,11 @@ vw-calc770(태블릿 사이즈size) {
     width: 58%; }
   #PageBodyWraper #cnt3 {
     position: relative;
-    display: flex;
-    flex-direction: row-reverse;
     height: 600px;
     margin-bottom: 250px;
     border: 1px solid #000; }
     #PageBodyWraper #cnt3 ul {
+      z-index: 2;
       position: absolute;
       left: 75px;
       width: 10px;
@@ -407,13 +406,17 @@ vw-calc770(태블릿 사이즈size) {
       -o-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%); }
+      #PageBodyWraper #cnt3 ul li.tab {
+        cursor: pointer; }
       #PageBodyWraper #cnt3 ul li {
+        position: relative;
         width: 10px;
         height: 10px;
         background: #000;
         border-radius: 50%;
         margin: 25px 0;
-        position: relative; }
+        position: relative;
+        cursor: pointer; }
         #PageBodyWraper #cnt3 ul li span {
           position: absolute;
           display: inline-block;
@@ -432,6 +435,18 @@ vw-calc770(태블릿 사이즈size) {
           padding: 3px 7px;
           font-weight: 800;
           border-radius: 5px; }
+    #PageBodyWraper #cnt3 .tabpanel {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+    #PageBodyWraper #cnt3 .tabpanel.active {
+      display: block; }
+    #PageBodyWraper #cnt3 .tabpanel > div {
+      display: flex;
+      flex-direction: row-reverse; }
     #PageBodyWraper #cnt3 .titleBox {
       border: 1px solid #000;
       height: 100%;

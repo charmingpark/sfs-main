@@ -490,13 +490,12 @@
 
   #cnt3 {
     position: relative;
-    display: flex;
-    flex-direction: row-reverse;
     height: 600px;
     margin-bottom: 250px;
     border: 1px solid #000;
 
     ul {
+      z-index: 2;
       position: absolute;
       left: 75px;
       width: 10px;
@@ -504,13 +503,19 @@
       top: 50%;
       @include translateY-50;
 
+      li.tab {
+        cursor: pointer;
+      }
+
       li {
+        position: relative;
         width: 10px;
         height: 10px;
         background: #000;
         border-radius: 50%;
         margin: 25px 0;
         position: relative;
+        cursor: pointer;
 
         span {
           position: absolute;
@@ -521,11 +526,32 @@
           width: auto;
           height: auto;
           border: 1px solid #000;
-          font-size: 12px; line-height: 13px; padding: 3px 7px;
+          font-size: 12px;
+          line-height: 13px;
+          padding: 3px 7px;
           font-weight: 800;
           border-radius: 5px;
         }
+
       }
+    }
+
+    .tabpanel {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .tabpanel.active {
+      display: block;
+    }
+
+    .tabpanel>div {
+      display: flex;
+      flex-direction: row-reverse;
     }
 
     .titleBox {
@@ -547,6 +573,7 @@
       }
     }
   }
+
 
   #cnt4 {
     width: 100%;
@@ -579,7 +606,8 @@
           height: 0;
         }
 
-        a { /* poa니까 그대로 크기확장 + zindex로 제어하면 됨. */
+        a {
+          /* poa니까 그대로 크기확장 + zindex로 제어하면 됨. */
           background: rgba(64, 224, 208, 0.349);
           position: absolute;
           display: block;
@@ -591,7 +619,8 @@
           text-transform: uppercase;
         }
 
-        svg {border: 1px solid #000;
+        svg {
+          border: 1px solid #000;
           position: absolute;
 
           bottom: 0;
@@ -629,7 +658,7 @@
     border: 1px solid #000;
     height: 615px;
     margin-bottom: 170px;
-    
+
   }
 
   #cnt6 {

@@ -32,6 +32,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- <script type="text/javascript" src="modal_try/modal-trial.js"></script> -->
   <script src="source/js/main_jq.js"></script>
+  <script src="source/js/tab.js"></script>
+  
 </head>
 
 <body data-dep-one="0" data-dep-two="0">
@@ -339,29 +341,79 @@
 
 
     </section>
-    <section id="cnt3">
-      <!-- tabPanel -->
+    <section id="cnt3" class="tab-box">
       <!-- 
-              (ul[id="tabList" role="tablist" aria-label="BEST 상품 리스트"]>(li*5[id="tab$" role="tab" aria-controls="tabpanel$"]))+(div*5[id="tabpanel$" class="best-four" role="tabpanel" aria-labelledby="tab$"]>(ul>li*4>a>(img[alt="상품$"]+h3+p+(p>(span>em)*3))))
-            -->
-
-      <ul>
-        <li><span>48</span></li><!-- NATIONALITIES REPRESENTED -->
-        <li><span>1450</span></li> <!-- STUDENTS -->
-        <li><span>40</span></li><!-- YEARS OF IBDP AUTHORIZATION -->
-        <li><span>1912</span></li><!-- YEAR SFS WAS FOUNDED -->
-        <li><span>35</span></li><!-- AVG. SFS IB SCORE  VS  AVG. WORLD IB SCORE -->
-      </ul>
-      <div class="img"></div>
-      <div class="titleBox tac">
-        <div class="title">
-          <span class="mini">BY THE NUMBERS<br>
-            LEARN MORE ABOUT S.F.S</span>
-          <h2 class="num">63</h2>
-          <p>fvfb</p>
+      (ul[id="tabList" role="tablist" aria-label="LEARN MORE ABOUT S.F.S BY THE NUMBERS"]>(li*5[id="tab$" role="tab" aria-controls="tabpanel$"]))+(div*5[id="tabpanel$" class="numOneByOne" role="tabpanel" aria-labelledby="tab$"]>(.img+(.titleBox.tac>.title>span.mini{BY THE NUMBERS<br>LEARN MORE ABOUT S.F.S}+h2.num{63}+p{fudvb}))) << class 를 수정해 주세요
+      -->
+        <ul id="tabList" class="tablist" role="tablist" aria-label="LEARN MORE ABOUT S.F.S BY THE NUMBERS">
+          <li id="tab1" class="tab" role="tab" aria-controls="tabpanel1"><span>48</span></li>
+          <li id="tab2" class="tab" role="tab" aria-controls="tabpanel2"><span>1450</span></li>
+          <li id="tab3" class="tab" role="tab" aria-controls="tabpanel3"><span>40</span></li>
+          <li id="tab4" class="tab" role="tab" aria-controls="tabpanel4"><span>1912</span></li>
+          <li id="tab5" class="tab" role="tab" aria-controls="tabpanel5"><span>35</span></li>
+        </ul>
+        
+        <div id="tabpanel1" class="tabpanel" role="tabpanel" aria-labelledby="tab1">
+          <div>
+            <div class="img"></div>
+            <div class="titleBox tac">
+              <div class="title">
+                <span class="mini">BY THE NUMBERS<br>LEARN MORE ABOUT S.F.S</span>
+                <h2 class="num">48</h2>
+                <p>NATIONALITIES REPRESENTED</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
+        <div id="tabpanel2" class="tabpanel" role="tabpanel" aria-labelledby="tab2">
+          <div>
+            <div class="img"></div>
+            <div class="titleBox tac">
+              <div class="title">
+                <span class="mini">BY THE NUMBERS<br>LEARN MORE ABOUT S.F.S</span>
+                <h2 class="num">1450</h2>
+                <p>STUDENTS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tabpanel3" class="tabpanel" role="tabpanel" aria-labelledby="tab3">
+          <div>
+            <div class="img"></div>
+            <div class="titleBox tac">
+              <div class="title">
+                <span class="mini">BY THE NUMBERS<br>LEARN MORE ABOUT S.F.S</span>
+                <h2 class="num">40</h2>
+                <p>YEARS OF IBDP AUTHORIZATION</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tabpanel4" class="tabpanel" role="tabpanel" aria-labelledby="tab4">
+          <div>
+            <div class="img"></div>
+            <div class="titleBox tac">
+              <div class="title">
+                <span class="mini">BY THE NUMBERS<br>LEARN MORE ABOUT S.F.S</span>
+                <h2 class="num">1912</h2>
+                <p>YEAR SFS WAS FOUNDED</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tabpanel5" class="tabpanel" role="tabpanel" aria-labelledby="tab5">
+          <div>
+            <div class="img"></div>
+            <div class="titleBox tac">
+              <div class="title">
+                <span class="mini">BY THE NUMBERS<br>LEARN MORE ABOUT S.F.S</span>
+                <h2 class="num">35</h2>
+                <p>AVG. SFS IB SCORE<br>AVG. WORLD IB SCORE is 29</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
 
     </section>
     <section id="cnt4">

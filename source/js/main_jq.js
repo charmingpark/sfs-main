@@ -151,4 +151,11 @@ $(function () {
 		});
 	});
 
+	
+	// top버튼 이동
+	$('.btn_top').on('click', function () {
+		fullpage_api.moveTo(1); //본문1의 위치로 자동 이동시키기
+		// 접근성을 위해 문서의 처음으로 포커스 강제 이동
+		$('.logo a').focus();
+	});
 });
