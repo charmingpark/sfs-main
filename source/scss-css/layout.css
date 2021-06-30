@@ -1,57 +1,664 @@
-/*
-Error: Invalid CSS after "    .": expected "{", was "}"
-        on line 771 of ./layout.scss
+@charset "UTF-8";
+/* #f0c2c9 , #ffdbe1 */
+/* TODO: 본문글씨 공통클래스 */
+/* @include translateY-50;
+    position: absolute;top: 50%; */
+    /* #1a1b1b
+#444 
+#b20000 wine
+#F0C2C9 wht wine
+#720000 wine:hover */
+/* #262A2D midnight */
+/* #FBF7EF (251,247,239) */
+/* https://codepen.io/g1eb/pen/MpXQZN dash-array */
+/* 초중고 섹션 30px 로 apis 따라하기 */
+/* 말줄임표 (line-clamp) */
+/* 
 
-766:         
-767:       }
-768:     }
-769:     .
-770: 
-771:   }
-772: 
-773:   #cnt8 {
-774:     height: 780px;
-775:     margin-bottom: 250px;
-776:     background: rgba(208, 16, 16, 0.172);
+@include animation(fadeUp 1.5s forwards);
 
-Backtrace:
-./layout.scss:771
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:688:in `block'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+@-webkit-keyframes fadeUp {
+  0%{opacity: 0;-webkit-transform: translateY(50px);}
+  100%{opacity: 1;-webkit-transform: translateY(0px);}
+}
+@-moz-keyframes fadeUp {
+  0%{opacity: 0;-moz-transform: translateY(50px);}
+  100%{opacity: 1;-moz-transform: translateY(0px);}
+}
+@keyframes fadeUp {
+  0%{opacity: 0;transform: translateY(50px);}
+  100%{opacity: 1;transform: translateY(0px);}
+
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"    .\": expected \"{\", was \"}\"\A         on line 771 of ./layout.scss\A \A 766:         \A 767:       }\A 768:     }\A 769:     .\A 770: \A 771:   }\A 772: \A 773:   #cnt8 {\A 774:     height: 780px;\A 775:     margin-bottom: 250px;\A 776:     background: rgba(208, 16, 16, 0.172);"; }
+/* 
+태블릿크기 x 1.07(비율로 더 크게 보이도록) = ??px => vw로 환산하자
+30 X 1.07 = 32.1px
+
+770px 에서 1vw의 크기가 얼마인지??
+770(해상도) / 100 = 7.7px
+
+32.1px / 7.7px = 4.168831168831169vw
+
+vw-calc770(태블릿 사이즈size) {
+  (size * 1.07) / (770 / 100)
+} 
+
+함수 만들기
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+함수 호출하기
+.box {
+  width: calc-percent(650px, 1000px);
+}
+*/
+/* 쓸때는 vw-calc770(40) 이렇게 px빼고 적는다 */
+/* 또는 calc(10% - 5.5584415584vw) 이렇게 적음 */
+#skip a:focus {
+  height: 50px;
+  line-height: 50px;
+  font-weight: 700;
+  border-bottom: 3px solid #b20000; }
+
+#headerWrap {
+  /* height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+  box-sizing: border-box; */ }
+
+#Header {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background: #b20000 url(../images/poster.jpg) no-repeat 100%/cover;
+  box-sizing: border-box;
+  border-bottom: 4px solid #b20000; }
+  #Header #HeaderVideo {
+    position: absolute;
+    top: -19%;
+    left: -11%;
+    width: 120%;
+    max-width: 140%;
+    height: 140%;
+    box-sizing: content-box;
+    pointer-events: none;
+    border: none; }
+  #Header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 30%, transparent 60%, rgba(0, 0, 0, 0.5) 100%);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: 2; }
+  #Header .headerTop,
+  #Header .headerBtm {
+    left: 0;
+    width: 100%;
+    max-width: none;
+    height: 100px;
+    padding: 0 60px;
+    box-sizing: border-box;
+    margin: 25px auto; }
+
+.logo a {
+  display: block;
+  height: 100px;
+  width: 400px; }
+
+.search {
+  margin-right: 160px;
+  height: 100%;
+  width: 50px; }
+  .search .btn_open {
+    width: 100%;
+    height: 100%; }
+    .search .btn_open::after {
+      left: 0;
+      right: 0;
+      margin: -10px auto;
+      width: 30px;
+      height: 30px; }
+  .search.on .search_slide_out {
+    width: 450px; }
+    .search.on .search_slide_out h2 {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+      margin-bottom: 10px; }
+    .search.on .search_slide_out .top {
+      height: 60px;
+      margin-bottom: 2.5rem;
+      letter-spacing: 1px; }
+      .search.on .search_slide_out .top label {
+        margin: 14px 20px;
+        line-height: 32px; }
+        .search.on .search_slide_out .top label.typing {
+          width: 30ch; }
+      .search.on .search_slide_out .top input {
+        padding: 14px 20px;
+        letter-spacing: 1px; }
+      .search.on .search_slide_out .top .search_button {
+        width: 62px;
+        height: 62px; }
+        .search.on .search_slide_out .top .search_button::after {
+          top: calc(50% - (28px / 2));
+          width: 25px;
+          height: 25px; }
+    .search.on .search_slide_out .nav_utility_search {
+      letter-spacing: 0.5px; }
+    .search.on .search_slide_out .btn_close {
+      left: -3.75rem;
+      width: 3.75rem;
+      height: 3.75rem; }
+
+.menu {
+  /* &.scroll_down {}
+
+  
+  // 스크롤을 내리면 i태그만 빼놓고 사라짐 (모바일에서도 이걸로 사용함.) 
+  
+  */ }
+  .menu .menu_open,
+  .menu .menu_close {
+    top: 3rem;
+    right: 4rem;
+    line-height: 60px;
+    position: fixed;
+    width: 100vw;
+    max-width: 8.375rem;
+    height: 100vh;
+    max-height: 3.75rem;
+    font-size: 14px;
+    letter-spacing: 3.82px; }
+  .menu.on .menu_slide_out {
+    width: 800px;
+    max-width: 900px; }
+    .menu.on .menu_slide_out .search {
+      margin-right: 160px; }
+
+.menuTop {
+  /* 제어 안되고있음 : 수정필요 */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between; }
+  .menuTop .sub_menu ul li {
+    height: 20px;
+    margin-right: 20px;
+    padding: 40px 0; }
+    .menuTop .sub_menu ul li a {
+      font-size: 11px;
+      letter-spacing: 3px;
+      line-height: 20px; }
+
+.search.on .search_slide_out,
+.menu.on .menu_slide_out {
+  position: fixed;
+  top: 0;
+  right: -800px;
+  display: block;
+  padding: 25px 60px;
+  box-sizing: border-box;
+  height: 100vh;
+  background: rgba(53, 63, 76, 0.95); }
+
+.main_menu {
+  margin: 60px 0 200px;
+  width: 50%; }
+  .main_menu > ul > li {
+    width: 100%;
+    height: 80px; }
+    .main_menu > ul > li > a {
+      display: inline-block;
+      position: relative;
+      height: 80px;
+      width: 100%;
+      line-height: 80px;
+      font-size: 35px;
+      letter-spacing: 3px;
+      overflow: hidden; }
+  .main_menu > ul ul {
+    width: 100%;
+    height: 100%;
+    font-size: 9px;
+    left: 100%;
+    top: 0; }
+    .main_menu > ul ul li {
+      top: 0;
+      left: 0; }
+      .main_menu > ul ul li a {
+        padding-left: 50px;
+        height: 50px;
+        width: 100%;
+        font-size: 16px;
+        line-height: 50px;
+        letter-spacing: 1.5px; }
+
+.apply_to {
+  box-sizing: border-box;
+  height: 60px;
+  width: 280px;
+  padding: 14px 23px;
+  top: -120px;
+  position: relative;
+  line-height: 30px;
+  overflow: hidden; }
+  .apply_to svg {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    padding: 5px 10px 5px 210px;
+    top: -5px;
+    right: 0; }
+
+.sticky {
+  /* sticky 로 만들고 싶음 */
+  /* 이미지를 넣지않으면 live server에서는 사이즈에 문제있어 보임 */
+  position: fixed;
+  top: 50%;
+  right: calc(-165px - -48px);
+  transform: translateY(-50%);
+  width: 165px;
+  z-index: 2;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  /* js로 focus제어 */ }
+  .sticky:hover {
+    right: 0; }
+  .sticky li {
+    height: 48px;
+    width: 100%; }
+    .sticky li a {
+      height: 48px;
+      letter-spacing: 3.5px;
+      font-size: 13px; }
+    .sticky li .img {
+      width: 48px;
+      height: 48px; }
+    .sticky li span {
+      display: block; }
+
+#PageBodyWraper {
+  bottom: 5px; }
+  #PageBodyWraper section {
+    width: 100%;
+    box-sizing: border-box; }
+  #PageBodyWraper #cnt1 {
+    height: 670px;
+    margin-bottom: 175px;
+    /* 제어 안되고있음 : 수정필요 */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; }
+    #PageBodyWraper #cnt1 .titleBox {
+      box-sizing: border-box;
+      padding: 25px 50px;
+      width: 100%;
+      max-width: 35%; }
+    #PageBodyWraper #cnt1 article.view {
+      width: 100%;
+      max-width: 65%;
+      height: 100%;
+      position: relative;
+      overflow: hidden; }
+      #PageBodyWraper #cnt1 article.view ul {
+        /* 제어 안되고있음 : 수정필요 */
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        height: 100%;
+        position: absolute; }
+      #PageBodyWraper #cnt1 article.view li {
+        box-sizing: border-box;
+        padding: 25px 45px;
+        width: 540px;
+        height: 100%; }
+        #PageBodyWraper #cnt1 article.view li:nth-child(even) {
+          background: white; }
+        #PageBodyWraper #cnt1 article.view li:nth-child(odd) {
+          background: #FBF7EF; }
+        #PageBodyWraper #cnt1 article.view li .txtBox {
+          width: 100%;
+          height: 250px; }
+          #PageBodyWraper #cnt1 article.view li .txtBox h3 {
+            font-size: 24px;
+            color: #b20000;
+            font-weight: 400;
+            margin-bottom: 1rem; }
+        #PageBodyWraper #cnt1 article.view li p {
+          width: 100%;
+          height: 120px;
+          /* 
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow : ellipsis; */ }
+        #PageBodyWraper #cnt1 article.view li img {
+          width: 100%;
+          height: 270px;
+          background: no-repeat 100% / cover; }
+      #PageBodyWraper #cnt1 article.view li:nth-of-type(1) {
+        /* juicer를 이용해 주소로 이미지 불러오기  */ }
+        #PageBodyWraper #cnt1 article.view li:nth-of-type(1) .photo {
+          background-image: url(https://img.juicer.io/ig/image/CQXqXzQCMwJ?s=6b66372c17f05be30d3211c0fe8e55c4ec7d1640); }
+      #PageBodyWraper #cnt1 article.view li:nth-of-type(2) .photo {
+        background: url(); }
+  #PageBodyWraper #cnt2 {
+    height: 660px;
+    margin-bottom: 175px;
+    display: flex; }
+    #PageBodyWraper #cnt2 .titleBox {
+      height: 100%;
+      width: 42%;
+      box-sizing: border-box;
+      padding: 90px 140px; }
+      #PageBodyWraper #cnt2 .titleBox .moreBtn {
+        margin-top: 20px; }
+  #PageBodyWraper #cnt2 .img,
+  #PageBodyWraper #cnt3 .img {
+    height: 100%;
+    width: 58%;
+    border-bottom: 5px solid #b20000; }
+  #PageBodyWraper #cnt2 .img {
+    background: url(../images/cnt2welcome.jpg) no-repeat 100%/cover;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; }
+  #PageBodyWraper #cnt3 {
+    position: relative;
+    height: 600px;
+    margin-bottom: 250px; }
+    #PageBodyWraper #cnt3 ul {
+      z-index: 2;
+      position: absolute;
+      left: 75px;
+      width: 10px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      #PageBodyWraper #cnt3 ul li.tab.active span:first-child {
+        position: relative; }
+        #PageBodyWraper #cnt3 ul li.tab.active span:first-child::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          width: 20px;
+          height: 20px;
+          border: 1px solid #5a6e7e;
+          border-radius: 50%; }
+      #PageBodyWraper #cnt3 ul li.tab.active span:last-child {
+        position: absolute;
+        display: inline-block;
+        left: 500%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
+        background: #5a6e7e;
+        font-size: 12px;
+        line-height: 13px;
+        padding: 3px 7px;
+        font-weight: 800;
+        border-radius: 5px;
+        color: #fff; }
+      #PageBodyWraper #cnt3 ul li {
+        position: relative;
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+        margin: 25px 0;
+        cursor: pointer; }
+        #PageBodyWraper #cnt3 ul li span:first-child {
+          display: block;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          background: #5a6e7e;
+          border-radius: 50%; }
+          #PageBodyWraper #cnt3 ul li span:first-child::before {
+            content: ""; }
+        #PageBodyWraper #cnt3 ul li span:last-child {
+          display: none; }
+  #PageBodyWraper .tabpanel {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  #PageBodyWraper .tabpanel.active {
+    display: block; }
+  #PageBodyWraper .tabpanel > div {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%; }
+  #PageBodyWraper .tabpanel .img {
+    background: no-repeat 100% / cover;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; }
+  #PageBodyWraper #tabpanel1 .img {
+    background-image: url(../images/example\ 1.jpg); }
+  #PageBodyWraper #tabpanel2 .img {
+    background-image: url(../images/students.jpg); }
+  #PageBodyWraper #tabpanel3 .img {
+    background-image: url(../images/example\ 2.jpg); }
+  #PageBodyWraper #tabpanel4 .img {
+    background-image: url(../images/example\ 3.jpg); }
+  #PageBodyWraper #tabpanel5 .img {
+    background-image: url(../images/example\ 4.jpg); }
+  #PageBodyWraper .titleBox {
+    height: 100%;
+    width: 42%;
+    box-sizing: border-box;
+    padding: 90px 140px; }
+    #PageBodyWraper .titleBox h2.num {
+      font-size: 130px;
+      margin-top: 80px;
+      padding-bottom: 50px;
+      font-weight: 400; }
+    #PageBodyWraper .titleBox p {
+      padding-top: 35px; }
+  #PageBodyWraper #cnt4 {
+    width: 100%;
+    height: 850px;
+    margin-bottom: 240px; }
+    #PageBodyWraper #cnt4 .title {
+      width: 100%;
+      box-sizing: border-box;
+      height: 200px; }
+    #PageBodyWraper #cnt4 .grade {
+      text-align: center;
+      width: 92%;
+      margin: 0 4%;
+      display: flex; }
+      #PageBodyWraper #cnt4 .grade li {
+        width: 25%;
+        position: relative; }
+        #PageBodyWraper #cnt4 .grade li::after {
+          content: "";
+          display: block;
+          padding-bottom: 130%;
+          height: 0; }
+        #PageBodyWraper #cnt4 .grade li a {
+          /* poa니까 그대로 크기확장 + zindex로 제어하면 됨. */
+          background: no-repeat 100% / cover;
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          font-size: 35px;
+          text-transform: uppercase;
+          opacity: 0.4;
+          -webkit-transition: all ease-in-out 0.3s;
+          -moz-transition: all ease-in-out 0.3s;
+          -o-transition: all ease-in-out 0.3s;
+          transition: all ease-in-out 0.3s; }
+        #PageBodyWraper #cnt4 .grade li:nth-of-type(1) a {
+          background-image: url(../images/Feature-Image1.jpg); }
+        #PageBodyWraper #cnt4 .grade li:nth-of-type(2) a {
+          background-image: url(../images/Feature-Image2.jpg); }
+        #PageBodyWraper #cnt4 .grade li:nth-of-type(3) a {
+          background-image: url(../images/Feature-Image3.jpg); }
+        #PageBodyWraper #cnt4 .grade li:nth-of-type(4) a {
+          background-image: url(../images/Feature-Image4.jpg); }
+        #PageBodyWraper #cnt4 .grade li a:hover, #PageBodyWraper #cnt4 .grade li a:focus {
+          z-index: 10;
+          top: -15px;
+          width: 105%;
+          height: 105%;
+          opacity: 1;
+          box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; }
+        #PageBodyWraper #cnt4 .grade li svg {
+          position: absolute;
+          z-index: 4;
+          bottom: 55px;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          height: 66px;
+          width: 400px;
+          font-family: "Raleway", sans-serif;
+          font-weight: 900;
+          /* dasharray가 있으면 글씨가 안보이게됨. */
+          z-index: 1;
+          animation: 30s ease 0s 1 normal forwards running draw; }
+          #PageBodyWraper #cnt4 .grade li svg text {
+            fill: transparent;
+            stroke: #fff;
+            stroke-width: 1.5px;
+            letter-spacing: 3px;
+            stroke-linecap: round;
+            text-transform: uppercase;
+            font-size: 42px; }
+  #PageBodyWraper #cnt5 {
+    border: 1px solid #000;
+    height: 615px;
+    margin-bottom: 170px; }
+  #PageBodyWraper #cnt6 {
+    height: 850px;
+    margin-bottom: 190px; }
+  #PageBodyWraper #cnt7 {
+    border: 1px solid #000;
+    /* 원본디자인 픽셀 그대로 가져오기 : 풋터까지 다 만들고 마지막에 제어 */
+    height: 1050px;
+    padding-top: 80px;
+    margin-bottom: 280px;
+    width: 100%;
+    height: 1010px;
+    margin-bottom: 240px; }
+    #PageBodyWraper #cnt7 .title {
+      color: #fff !important;
+      width: 100%;
+      box-sizing: border-box;
+      height: 200px; }
+      #PageBodyWraper #cnt7 .title h2 {
+        color: #fff !important; }
+        #PageBodyWraper #cnt7 .title h2::after {
+          background: #fff; }
+    #PageBodyWraper #cnt7 article {
+      width: 100%;
+      height: 570px;
+      position: relative; }
+      #PageBodyWraper #cnt7 article ul {
+        height: 100%;
+        width: 5050px;
+        position: absolute;
+        left: -565px;
+        display: flex;
+        justify-content: space-between; }
+        #PageBodyWraper #cnt7 article ul li {
+          border: 1px solid #000;
+          height: 100%;
+          width: 950px;
+          margin: 0 30px; }
+          #PageBodyWraper #cnt7 article ul li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex; }
+          #PageBodyWraper #cnt7 article ul li .img {
+            width: 60%;
+            height: 100%;
+            box-sizing: border-box;
+            border: 1px solid #0f0; }
+          #PageBodyWraper #cnt7 article ul li .txtBox {
+            width: 40%;
+            height: 100%;
+            border: 1px solid #f00;
+            box-sizing: border-box;
+            padding: 50px; }
+  #PageBodyWraper #cnt8 {
+    height: 780px;
+    margin-bottom: 250px;
+    background: rgba(208, 16, 16, 0.172); }
+
+#Footer .info {
+  height: 580px;
+  background: rgba(208, 16, 16, 0.172); }
+#Footer .copyR {
+  height: 85px;
+  background: rgba(16, 208, 70, 0.172); }
+
+#dim,
+.md_cnt {
+  position: fixed;
+  z-index: 1000; }
+
+#dim {
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); }
+
+.md_cnt {
+  visibility: hidden; }
+
+@media (min-width: 600px) {
+  .headerTop {
+    padding-left: 20px; } }
+
+/*# sourceMappingURL=layout.css.map */
