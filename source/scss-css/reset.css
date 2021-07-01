@@ -106,7 +106,8 @@ button,
 input {
   font-family: inherit;
   font-size: inherit;
-  color: inherit; }
+  color: inherit;
+  letter-spacing: inherit; }
 
 button {
   border: none;

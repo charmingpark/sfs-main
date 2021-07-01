@@ -579,6 +579,7 @@ vw-calc770(태블릿 사이즈size) {
     position: relative;
     display: flex; }
     #PageBodyWraper #cnt5 .titleBox {
+      border: 1px solid #f00;
       height: 100%;
       width: 42%;
       box-sizing: border-box;
@@ -588,40 +589,52 @@ vw-calc770(태블릿 사이즈size) {
       #PageBodyWraper #cnt5 .titleBox .moreBtn {
         position: relative;
         margin-top: 20px; }
-    #PageBodyWraper #cnt5 nav ul {
-      position: relative;
+    #PageBodyWraper #cnt5 nav {
       width: 300px;
-      height: 50px; }
-    #PageBodyWraper #cnt5 nav li {
-      width: 100%;
-      height: 100%;
-      border: 1px solid #000; }
-      #PageBodyWraper #cnt5 nav li ul {
+      height: 114px;
+      font-size: 22px;
+      letter-spacing: 1.5px; }
+      #PageBodyWraper #cnt5 nav .Grade, #PageBodyWraper #cnt5 nav .Professor {
+        width: 300px;
+        height: 45px;
+        position: relative; }
+      #PageBodyWraper #cnt5 nav button {
+        width: 300px;
+        height: 45px;
+        border: 1px solid #5a6e7e;
+        position: relative;
+        margin: 8px 0;
+        color: #b20000;
+        text-align: left;
+        box-sizing: border-box;
+        padding: 0 15px; }
+        #PageBodyWraper #cnt5 nav button::after {
+          content: "";
+          position: absolute;
+          top: 19px;
+          right: 20px;
+          display: block;
+          width: 0;
+          height: 0;
+          border-top: 8px solid #5a6e7e;
+          border-right: 8px solid transparent;
+          border-left: 8px solid transparent; }
+      #PageBodyWraper #cnt5 nav ul {
+        position: absolute;
+        left: 0;
+        top: 52px;
+        width: 300px;
+        height: auto; }
+      #PageBodyWraper #cnt5 nav li {
+        width: 300px;
+        height: 45px;
+        box-sizing: border-box;
+        padding: 0 15px;
+        background: #589d66; }
+      #PageBodyWraper #cnt5 nav a {
+        display: block;
         width: 100%;
-        visibility: hidden;
-        overflow: hidden;
-        max-height: 0; }
-        #PageBodyWraper #cnt5 nav li ul li {
-          width: 100%; }
-          #PageBodyWraper #cnt5 nav li ul li a {
-            width: 100%;
-            border: 1px solid #f00; }
-    #PageBodyWraper #cnt5 nav > ul > li > a {
-      padding: 10px 40px;
-      font-size: 23px;
-      font-weight: 500; }
-    #PageBodyWraper #cnt5 nav > ul > li > a::after {
-      content: "";
-      position: absolute;
-      top: calc(50% - 12px);
-      right: 30px;
-      margin: 0 auto;
-      display: block;
-      width: 0;
-      height: 0;
-      border-top: 8px solid #5a6e7e;
-      border-right: 8px solid transparent;
-      border-left: 8px solid transparent; }
+        height: 100%; }
     #PageBodyWraper #cnt5 article.view {
       position: absolute;
       top: 0;
