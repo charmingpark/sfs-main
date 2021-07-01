@@ -779,9 +779,38 @@
         height: 50px;
       }
 
-      li {
+      li {width: 100%; height: 100%;
         border: 1px solid #000;
         margin-top: 20px;
+        ul{width: 100%;
+          visibility: hidden;
+          overflow: hidden;
+          max-height: 0;
+          li{width: 100%;
+            a{width: 100%;
+              border: 1px solid #f00;
+            }
+          }
+        }
+      }
+      >ul>li>a{
+        padding: 10px 40px;
+        font-size: 23px;
+        font-weight: 500;
+      }
+      >ul>li>a::after {
+        content: "";
+        position: absolute;
+        top: calc(50% - 12px);
+        right: 30px;
+        margin: 0 auto;
+        display: block;
+        width: 0;
+        height: 0;
+        border-top:8px solid $silkynight;
+        border-right:8px solid transparent;
+        border-left: 8px solid transparent;
+
       }
     }
 
@@ -791,7 +820,7 @@
       right: 0;
       width: 950px;
       height: 530px;
-      border: 1px solid rgb(36, 17, 17);
+      border: 1px solid #000;
 
       ul {
         height: 100%;
@@ -823,50 +852,6 @@
   }
 
   // #cnt5 nav a{display: block; padding-left: 15px; /* line-height: 48px; font-size: 23px; */}
-  #cnt5 nav>ul>li>a {
-    padding: 10px 40px;
-    font-size: 23px;
-    font-weight: 500;
-  }
-
-  /* 부정선택자  :not(제외하고싶은 선택자)
-  여러개를 제외하려면 :not():not() 연결해서 사용함      */
-  #cnt5 nav>ul>li:not(.gnb4):not(.gnb7)>a::before,
-  #cnt5 nav>ul>li:not(.gnb4):not(.gnb7)>a::after {
-    content: "";
-    position: absolute;
-    right: 40px;
-    top: 50%;
-    width: 12px;
-    height: 2px;
-    background: #fff;
-  }
-
-  #cnt5 nav>ul>li:not(.gnb4):not(.gnb7)>a::after {
-    transform: rotate(90deg);
-    transition: transform 0.5s;
-  }
-
-  #cnt5 nav>ul>li.on:not(.gnb4):not(.gnb7)>a::after {
-    transform: rotate(0deg);
-  }
-
-  #cnt5 nav ul li ul {
-    visibility: hidden;
-    overflow: hidden;
-    max-height: 0;
-  }
-
-  #cnt5 nav ul li ul li a {
-    padding: 5px 40px;
-    background: #8a3eaa;
-  }
-
-
-
-
-
-
 
   #cnt6 {
     height: 850px;
