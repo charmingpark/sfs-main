@@ -575,11 +575,10 @@ vw-calc770(태블릿 사이즈size) {
             font-size: 42px; }
   #PageBodyWraper #cnt5 {
     height: 615px;
-    margin-bottom: 170px;
+    margin-bottom: 80px;
     position: relative;
     display: flex; }
     #PageBodyWraper #cnt5 .titleBox {
-      border: 1px solid #f00;
       height: 100%;
       width: 42%;
       box-sizing: border-box;
@@ -594,20 +593,23 @@ vw-calc770(태블릿 사이즈size) {
       height: 114px;
       font-size: 22px;
       letter-spacing: 1.5px; }
-      #PageBodyWraper #cnt5 nav .Grade, #PageBodyWraper #cnt5 nav .Professor {
+      #PageBodyWraper #cnt5 nav .Grade,
+      #PageBodyWraper #cnt5 nav .Professor {
         width: 300px;
         height: 45px;
-        position: relative; }
+        position: relative;
+        margin: 13px 0; }
       #PageBodyWraper #cnt5 nav button {
         width: 300px;
         height: 45px;
         border: 1px solid #5a6e7e;
         position: relative;
-        margin: 8px 0;
         color: #b20000;
         text-align: left;
         box-sizing: border-box;
         padding: 0 15px; }
+        #PageBodyWraper #cnt5 nav button:hover, #PageBodyWraper #cnt5 nav button:focus {
+          background: #FBF7EF; }
         #PageBodyWraper #cnt5 nav button::after {
           content: "";
           position: absolute;
@@ -620,6 +622,7 @@ vw-calc770(태블릿 사이즈size) {
           border-right: 8px solid transparent;
           border-left: 8px solid transparent; }
       #PageBodyWraper #cnt5 nav ul {
+        display: none;
         position: absolute;
         left: 0;
         top: 52px;
@@ -677,6 +680,12 @@ vw-calc770(태블릿 사이즈size) {
         color: #fff;
         font-size: 20px;
         line-height: 40px; }
+        #PageBodyWraper #cnt5 article.view .txt h4 {
+          letter-spacing: 2.5px;
+          font-size: 12px;
+          font-family: "Raleway", sans-serif;
+          font-weight: 800;
+          text-transform: uppercase; }
         #PageBodyWraper #cnt5 article.view .txt .mini {
           font-size: 30px;
           line-height: 30px; }
@@ -688,8 +697,67 @@ vw-calc770(태블릿 사이즈size) {
       right: 40px;
       bottom: 0; }
   #PageBodyWraper #cnt6 {
-    height: 850px;
-    margin-bottom: 190px; }
+    height: 1000px;
+    margin-bottom: 190px;
+    border: 1px solid #000;
+    position: relative; }
+    #PageBodyWraper #cnt6 .titleBox {
+      position: absolute;
+      right: 0;
+      width: 50%;
+      height: 100%; }
+    #PageBodyWraper #cnt6 article {
+      position: absolute;
+      top: 190px;
+      height: 650px;
+      overflow: hidden;
+      width: 100%; }
+      #PageBodyWraper #cnt6 article ul {
+        height: 100%;
+        display: flex;
+        position: relative;
+        left: -550px; }
+        #PageBodyWraper #cnt6 article ul li {
+          width: 700px;
+          flex: 0 0 auto;
+          margin: 0 13px; }
+        #PageBodyWraper #cnt6 article ul section {
+          height: 570px; }
+          #PageBodyWraper #cnt6 article ul section a {
+            display: block;
+            height: 100%; }
+            #PageBodyWraper #cnt6 article ul section a .img {
+              height: 70%;
+              border: 1px solid #000; }
+            #PageBodyWraper #cnt6 article ul section a .txt {
+              position: relative;
+              height: 30%;
+              box-sizing: border-box;
+              padding: 30px 40px;
+              background: #FBF7EF; }
+              #PageBodyWraper #cnt6 article ul section a .txt h4 {
+                letter-spacing: 2.5px;
+                line-height: 30px;
+                font-size: 12px;
+                font-family: "Raleway", sans-serif;
+                font-weight: 800;
+                text-transform: uppercase; }
+              #PageBodyWraper #cnt6 article ul section a .txt .title {
+                font-size: 30px;
+                line-height: 30px;
+                font-family: "Raleway", sans-serif;
+                color: #b20000; }
+    #PageBodyWraper #cnt6 .flex-container {
+      list-style: none;
+      border: 1px solid silver;
+      display: flex;
+      flex-flow: row wrap; }
+    #PageBodyWraper #cnt6 .flex-start {
+      -webkit-align-content: flex-start;
+      align-content: flex-start; }
+    #PageBodyWraper #cnt6 .center {
+      -webkit-align-content: flex-end;
+      align-content: flex-end; }
   #PageBodyWraper #cnt7 {
     background: #395061;
     /* 원본디자인 픽셀 그대로 가져오기 : 풋터까지 다 만들고 마지막에 제어 */
@@ -797,8 +865,7 @@ vw-calc770(태블릿 사이즈size) {
     transform: rotate(0deg); } }
   #PageBodyWraper #cnt8 {
     height: 780px;
-    margin-bottom: 250px;
-    background: rgba(83, 16, 208, 0.172);
+    margin-bottom: 300px;
     position: relative;
     display: flex; }
     #PageBodyWraper #cnt8 .img {
@@ -822,18 +889,66 @@ vw-calc770(태블릿 사이즈size) {
       background: #fff;
       border-top: 5px solid #b20000; }
     #PageBodyWraper #cnt8 .map {
+      display: block;
       position: absolute;
       right: 140px;
       bottom: -80px;
       width: 610px;
-      height: 470px; }
+      height: 470px;
+      background: url(../images/1x/map-8.png) no-repeat 100%/cover; }
 
 #Footer .info {
   height: 580px;
-  background: rgba(208, 16, 16, 0.172); }
+  background: rgba(208, 16, 16, 0.172);
+  box-sizing: border-box;
+  padding: 75px 210px 135px; }
+  #Footer .info div {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    position: relative; }
+    #Footer .info div .logo {
+      display: block;
+      height: 70%;
+      width: 300px;
+      background: url(../images/1x/footer-logo.png) no-repeat 100%/cover; }
+  #Footer .info .schInfo {
+    display: flex;
+    width: 67%;
+    height: 100%;
+    border: 1px solid #000;
+    position: absolute;
+    top: 0;
+    right: 0; }
+    #Footer .info .schInfo li {
+      width: 200px;
+      border: 1px solid #000;
+      margin-right: 100px; }
+  #Footer .info .sns-menu {
+    height: 53px;
+    width: 67%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 1px solid #000; }
 #Footer .copyR {
   height: 85px;
-  background: rgba(16, 208, 70, 0.172); }
+  line-height: 85px;
+  box-sizing: border-box;
+  padding: 0 250px; }
+  #Footer .copyR .left {
+    float: left; }
+  #Footer .copyR .right {
+    float: right;
+    display: flex; }
+    #Footer .copyR .right ul {
+      display: flex;
+      height: 100%;
+      width: 50%; }
+    #Footer .copyR .right > a {
+      display: block;
+      width: 140px;
+      border: 1px solid #000; }
 
 #dim,
 .md_cnt {
