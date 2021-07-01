@@ -999,33 +999,67 @@
         }
       }
     }
-    .sliderBtn{position: absolute;width: 156px;height: 100px;left: 0;right: 0;margin: 0 auto;margin-top: 30px;display: flex;
-    button{width: 11px; height: 10px;margin: 20px;background: url(../images/SVG/wht_arrow.svg);
-      
-      @include animation (twinkle 3s linear infinite both);}
-    .point{width: 53px;height: 53px;border-radius: 50%; background:$wine url(../images/SVG/cursor_pointer.svg) no-repeat 100% / cover;
-      
-      
-      &:hover{@include animation (point 6s linear infinite both);}}
-    
-}p.pointTxt{height: 30px;text-align: center; line-height: 30px; color: hsl(0, 0%, 90%); margin-top: 90px;}
-    @keyframes twinkle{
-      from {
-        opacity:1;
+
+    .sliderBtn {
+      position: absolute;
+      width: 156px;
+      height: 100px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      margin-top: 30px;
+      display: flex;
+
+      button {
+        width: 11px;
+        height: 10px;
+        margin: 20px;
+        background: url(../images/SVG/wht_arrow.svg);
+
+        @include animation (twinkle 3s linear infinite both);
       }
-      
+
+      .point {
+        width: 53px;
+        height: 53px;
+        border-radius: 50%;
+        background: $wine url(../images/SVG/cursor_pointer.svg) no-repeat 100% / cover;
+
+
+        &:hover {
+          @include animation (point 6s linear infinite both);
+        }
+      }
+
+    }
+
+    p.pointTxt {
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      color: hsl(0, 0%, 90%);
+      margin-top: 90px;
+    }
+
+    @keyframes twinkle {
+      from {
+        opacity: 1;
+      }
+
       to {
-        opacity:0.3;
+        opacity: 0.3;
       }
     }
-    @keyframes point{
+
+    @keyframes point {
       0% {
         transform: rotate(0deg);
       }
-      
+
       50% {
         transform: rotate(90deg);
       }
+
       100% {
         transform: rotate(0deg);
       }
