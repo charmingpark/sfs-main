@@ -1233,12 +1233,17 @@
 }
 
 #Footer {
+  color: #fff;font-family: "Raleway", sans-serif;font-size:14px;
+  
   .info {
     height: 580px;
     background: rgba(208, 16, 16, 0.172);
     box-sizing: border-box;
     padding: 75px 210px 135px;
-
+    h2{font-size: 19px;font-weight: 500;margin-bottom: 20px;position: relative;
+    &::after{content: ""; display: block; height: 2px; width: 10px; position: absolute; 
+      bottom: -10px; color: $wine;
+      left: 0;}}
     div {
       width: 100%;
       height: 100%;
@@ -1275,6 +1280,12 @@
   }
 
   .copyR {
+    letter-spacing: 2.5px;
+    line-height: 30px;
+    
+    font-weight: 800;
+    text-transform: uppercase;
+
     height: 85px;
     line-height: 85px;
     box-sizing: border-box;
