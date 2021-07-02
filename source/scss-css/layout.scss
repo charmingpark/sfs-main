@@ -391,13 +391,6 @@
         width: 540px;
         height: 100%;
 
-        &:nth-child(even) {
-          background: rgb(255, 255, 255);
-        }
-
-        &:nth-child(odd) {
-          background: #FBF7EF;
-        }
 
         .txtBox {
           width: 100%;
@@ -423,13 +416,17 @@
         }
 
         .img {
-
+          aspect-ratio: 5 / 3;
           width: 100%;
           height: 270px;
           background: no-repeat 100% / cover;
         }
         &.first .img, &.third .img{background-image: url(https://img.juicer.io/ig/image/CQXqXzQCMwJ?s=6b66372c17f05be30d3211c0fe8e55c4ec7d1640);}
         &.secnd .img, &.fourth .img{background-image: url(https://img.juicer.io/ig/image/CQh9hbvs3Ez?s=8ef8073f1089feaff1890c13ba1d8de1522ee894);}
+
+        &.first, &.third{background: #FBF7EF;}
+        &.secnd, &.fourth{background: rgb(255, 255, 255);}
+        
         //&:nth-of-type(3) .img{background-image: url();}
         //&:nth-of-type(4) .img{background-image: url();}
       }
@@ -460,7 +457,7 @@
     height: 100%;
     width: 58%;
     border-bottom: 5px solid $wine;
-
+    aspect-ratio: 8 / 5;
   }
 
   #cnt2 .img {
@@ -1254,7 +1251,8 @@ box-shadow: $shadow;
       bottom: 0;
       right: 0;
       display: flex;
-      li{width: 53px;height: 53px; margin-right: 35px;
+      li{width: 53px;height: 53px; margin-right: 35px; 
+        aspect-ratio: 1 / 1;
       a{display: block; width: 100%;height: 100%; border-radius: 50%; background: $wine;
       &:hover, &:focus{background: $wine-hover; }}}
     }

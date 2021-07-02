@@ -336,10 +336,6 @@ vw-calc770(태블릿 사이즈size) {
         padding: 25px 45px;
         width: 540px;
         height: 100%; }
-        #PageBodyWraper #cnt1 article.view li:nth-child(even) {
-          background: white; }
-        #PageBodyWraper #cnt1 article.view li:nth-child(odd) {
-          background: #FBF7EF; }
         #PageBodyWraper #cnt1 article.view li .txtBox {
           width: 100%;
           height: 250px; }
@@ -357,6 +353,7 @@ vw-calc770(태블릿 사이즈size) {
           white-space: nowrap;
           text-overflow : ellipsis; */ }
         #PageBodyWraper #cnt1 article.view li .img {
+          aspect-ratio: 5 / 3;
           width: 100%;
           height: 270px;
           background: no-repeat 100% / cover; }
@@ -364,6 +361,10 @@ vw-calc770(태블릿 사이즈size) {
           background-image: url(https://img.juicer.io/ig/image/CQXqXzQCMwJ?s=6b66372c17f05be30d3211c0fe8e55c4ec7d1640); }
         #PageBodyWraper #cnt1 article.view li.secnd .img, #PageBodyWraper #cnt1 article.view li.fourth .img {
           background-image: url(https://img.juicer.io/ig/image/CQh9hbvs3Ez?s=8ef8073f1089feaff1890c13ba1d8de1522ee894); }
+        #PageBodyWraper #cnt1 article.view li.first, #PageBodyWraper #cnt1 article.view li.third {
+          background: #FBF7EF; }
+        #PageBodyWraper #cnt1 article.view li.secnd, #PageBodyWraper #cnt1 article.view li.fourth {
+          background: white; }
   #PageBodyWraper #cnt2 {
     height: 660px;
     margin-bottom: 175px;
@@ -379,7 +380,8 @@ vw-calc770(태블릿 사이즈size) {
   #PageBodyWraper #cnt3 .img {
     height: 100%;
     width: 58%;
-    border-bottom: 5px solid #b20000; }
+    border-bottom: 5px solid #b20000;
+    aspect-ratio: 8 / 5; }
   #PageBodyWraper #cnt2 .img {
     background: url(../images/intro.jpg) no-repeat 100%/cover;
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; }
@@ -971,7 +973,8 @@ vw-calc770(태블릿 사이즈size) {
       #Footer .info .sns-menu li {
         width: 53px;
         height: 53px;
-        margin-right: 35px; }
+        margin-right: 35px;
+        aspect-ratio: 1 / 1; }
         #Footer .info .sns-menu li a {
           display: block;
           width: 100%;
