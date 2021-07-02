@@ -107,21 +107,21 @@ vw-calc770(태블릿 사이즈size) {
     background: url(../images/header_logo.png) no-repeat 100% center/contain;
     /* transition: transform 1.2s ease opacity 0.3s; */ }
 
-.search .btn_open {
-  position: relative; }
-  .search .btn_open::after {
-    content: "";
-    position: absolute;
-    background: url(../images/SVG/search.svg) no-repeat 100%/contain;
-    opacity: 0.95;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s; }
-  .search .btn_open:hover::after, .search .btn_open:focus::after {
-    transform: scale(1.3, 1.3); }
-.search.on {
+.search {
   /* on이 되면 스크롤 금지 */ }
+  .search .btn_open {
+    position: relative; }
+    .search .btn_open::after {
+      content: "";
+      position: absolute;
+      background: url(../images/SVG/search.svg) no-repeat 100%/contain;
+      opacity: 0.95;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+    .search .btn_open:hover::after, .search .btn_open:focus::after {
+      transform: scale(1.3, 1.3); }
   .search.on .search_slide_out {
     -webkit-flex-flow: column;
     -moz-flex-flow: column;

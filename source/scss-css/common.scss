@@ -67,9 +67,8 @@
     }
   }
 
+/* on이 되면 스크롤 금지 */
   &.on {
-    /* on이 되면 스크롤 금지 */
-
     .search_slide_out {
       @include placeholder {
         color: #fff;

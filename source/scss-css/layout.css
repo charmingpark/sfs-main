@@ -71,12 +71,6 @@ vw-calc770(태블릿 사이즈size) {
   font-weight: 700;
   border-bottom: 3px solid #b20000; }
 
-#headerWrap {
-  /* height: 100vh;
-  min-height: 700px;
-  overflow: hidden;
-  box-sizing: border-box; */ }
-
 #Header {
   position: relative;
   overflow: hidden;
@@ -370,12 +364,6 @@ vw-calc770(태블릿 사이즈size) {
           background-image: url(https://img.juicer.io/ig/image/CQXqXzQCMwJ?s=6b66372c17f05be30d3211c0fe8e55c4ec7d1640); }
         #PageBodyWraper #cnt1 article.view li:nth-of-type(even) .img {
           background-image: url(https://img.juicer.io/ig/image/CQh9hbvs3Ez?s=8ef8073f1089feaff1890c13ba1d8de1522ee894); }
-      #PageBodyWraper #cnt1 article.view li:nth-of-type(1) {
-        /* juicer를 이용해 주소로 이미지 불러오기  */ }
-        #PageBodyWraper #cnt1 article.view li:nth-of-type(1) .photo {
-          background-image: url(https://img.juicer.io/ig/image/CQXqXzQCMwJ?s=6b66372c17f05be30d3211c0fe8e55c4ec7d1640); }
-      #PageBodyWraper #cnt1 article.view li:nth-of-type(2) .photo {
-        background: url(); }
   #PageBodyWraper #cnt2 {
     height: 660px;
     margin-bottom: 175px;
