@@ -221,21 +221,28 @@ $('.prev').on('click', function () {
 	const oneSize = $sliderUl.children().outerWidth(true); /* = onceMove 1개씩만 움직임 */
 	console.log($sliderUl,oneSize);
 	console.log($cnt.attr('id'));
-
+	
 	if ($sliderUl.is(':animated')) return false;
 	$sliderUl.prepend($sliderUl.children().last().clone()).css('marginLeft', -oneSize).animate({marginLeft: 0}, 1000, function () {
-	$(this).children().last().remove();
-	ariaHidden();
+		$(this).children().last().remove();
+		ariaHidden();
 	});
+	
+	//if ($(this).parents('#cnt6'))  
 });
 
-// $('.next').on('click', function () {
-// 	if ($sliderUl.is(':animated')) return false;
-// 	$sliderUl.append($sliderUl.children().first().clone()).animate({marginLeft: -400}, 1000, function () {
-// 		$(this).css('marginLeft', 0).children().first().remove();
-// 		ariaHidden();
-// 	});
-// });
+$('.next').on('click', function () {
+	const $cnt = $(this).parents('.cnt');
+	const $view = $cnt.find('article.view');
+	$sliderUl = $view.find('ul');
+	const oneSize = $sliderUl.children().outerWidth(true);
+
+  if ($sliderUl.is(':animated')) return false;
+	$sliderUl.append($sliderUl.children().first().clone()).animate({marginLeft: -oneSize}, 1000, function () {
+		$(this).css('marginLeft', 0).children().first().remove();
+		ariaHidden();
+	});
+});
 
 // 접근성 추가
 function ariaHidden() {

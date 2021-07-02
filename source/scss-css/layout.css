@@ -360,9 +360,9 @@ vw-calc770(태블릿 사이즈size) {
           width: 100%;
           height: 270px;
           background: no-repeat 100% / cover; }
-        #PageBodyWraper #cnt1 article.view li:nth-of-type(odd) .img {
+        #PageBodyWraper #cnt1 article.view li.first .img, #PageBodyWraper #cnt1 article.view li.third .img {
           background-image: url(https://img.juicer.io/ig/image/CQXqXzQCMwJ?s=6b66372c17f05be30d3211c0fe8e55c4ec7d1640); }
-        #PageBodyWraper #cnt1 article.view li:nth-of-type(even) .img {
+        #PageBodyWraper #cnt1 article.view li.secnd .img, #PageBodyWraper #cnt1 article.view li.fourth .img {
           background-image: url(https://img.juicer.io/ig/image/CQh9hbvs3Ez?s=8ef8073f1089feaff1890c13ba1d8de1522ee894); }
   #PageBodyWraper #cnt2 {
     height: 660px;
@@ -654,13 +654,13 @@ vw-calc770(태블릿 사이즈size) {
         position: relative;
         background: no-repeat 150% / cover;
         box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; }
-      #PageBodyWraper #cnt5 article.view li:nth-of-type(1) a {
+      #PageBodyWraper #cnt5 article.view li.first a {
         background-image: url(../images/1.jpg); }
-      #PageBodyWraper #cnt5 article.view li:nth-of-type(2) a {
+      #PageBodyWraper #cnt5 article.view li.secnd a {
         background-image: url(../images/2.jpg); }
-      #PageBodyWraper #cnt5 article.view li:nth-of-type(3) a {
+      #PageBodyWraper #cnt5 article.view li.third a {
         background-image: url(../images/3.jpg); }
-      #PageBodyWraper #cnt5 article.view li:nth-of-type(4) a {
+      #PageBodyWraper #cnt5 article.view li.fourth a {
         background-image: url(../images/2.jpg); }
       #PageBodyWraper #cnt5 article.view .txt {
         position: absolute;
@@ -713,14 +713,20 @@ vw-calc770(태블릿 사이즈size) {
           width: 700px;
           flex: 0 0 auto;
           margin: 0 13px; }
-          #PageBodyWraper #cnt6 article ul li:nth-of-type(1) .img {
+          #PageBodyWraper #cnt6 article ul li.first .img {
             background: url(../images/goon.jpg); }
-          #PageBodyWraper #cnt6 article ul li:nth-of-type(2) .img {
+          #PageBodyWraper #cnt6 article ul li.secnd .img {
             background: url(../images/roundupsports.jpg); }
-          #PageBodyWraper #cnt6 article ul li:nth-of-type(3) .img {
+          #PageBodyWraper #cnt6 article ul li.third .img {
             background: url(../images/winner.jpg); }
-          #PageBodyWraper #cnt6 article ul li:nth-of-type(4) .img {
+          #PageBodyWraper #cnt6 article ul li.fourth .img {
             background: url(../images/J70Yacht.jpg); }
+          #PageBodyWraper #cnt6 article ul li:nth-of-type(2) {
+            -webkit-align-content: flex-start;
+            align-content: flex-start; }
+          #PageBodyWraper #cnt6 article ul li:nth-of-type(1), #PageBodyWraper #cnt6 article ul li:nth-of-type(3), #PageBodyWraper #cnt6 article ul li:nth-of-type(4) {
+            -webkit-align-content: flex-end;
+            align-content: flex-end; }
         #PageBodyWraper #cnt6 article ul section {
           height: 570px; }
           #PageBodyWraper #cnt6 article ul section a {
@@ -752,12 +758,6 @@ vw-calc770(태블릿 사이즈size) {
       list-style: none;
       display: flex;
       flex-flow: row wrap; }
-    #PageBodyWraper #cnt6 .flex-start {
-      -webkit-align-content: flex-start;
-      align-content: flex-start; }
-    #PageBodyWraper #cnt6 .center {
-      -webkit-align-content: flex-end;
-      align-content: flex-end; }
     #PageBodyWraper #cnt6 .btnBox {
       position: absolute;
       left: 300px;
@@ -809,13 +809,13 @@ vw-calc770(태블릿 사이즈size) {
             height: 100%;
             box-sizing: border-box;
             background: no-repeat 100% / cover; }
-          #PageBodyWraper #cnt7 article.view ul li:nth-of-type(1) .img {
+          #PageBodyWraper #cnt7 article.view ul li.first .img {
             background-image: url(../images/cnt71.jpg); }
-          #PageBodyWraper #cnt7 article.view ul li:nth-of-type(2) .img {
+          #PageBodyWraper #cnt7 article.view ul li.secnd .img {
             background-image: url(../images/cnt74-1.jpg); }
-          #PageBodyWraper #cnt7 article.view ul li:nth-of-type(3) .img {
+          #PageBodyWraper #cnt7 article.view ul li.third .img {
             background-image: url(../images/cnt72.jpg); }
-          #PageBodyWraper #cnt7 article.view ul li:nth-of-type(4) .img {
+          #PageBodyWraper #cnt7 article.view ul li.fourth .img {
             background-image: url(../images/cnt74.jpg); }
           #PageBodyWraper #cnt7 article.view ul li .txtBox {
             width: 40%;
