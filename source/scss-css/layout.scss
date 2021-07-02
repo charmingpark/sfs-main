@@ -422,20 +422,23 @@
 
         p {
           width: 100%;
-          height: 120px;
+          height: 160px;overflow: hidden;
           /* 
-          overflow: hidden;
+          
           white-space: nowrap;
           text-overflow : ellipsis; */
         }
 
-        img {
+        .img {
 
           width: 100%;
           height: 270px;
           background: no-repeat 100% / cover;
         }
-
+        &:nth-of-type(odd) .img{background-image: url(https://img.juicer.io/ig/image/CQXqXzQCMwJ?s=6b66372c17f05be30d3211c0fe8e55c4ec7d1640);}
+        &:nth-of-type(even) .img{background-image: url(https://img.juicer.io/ig/image/CQh9hbvs3Ez?s=8ef8073f1089feaff1890c13ba1d8de1522ee894);}
+        //&:nth-of-type(3) .img{background-image: url();}
+        //&:nth-of-type(4) .img{background-image: url();}
       }
 
       li:nth-of-type(1) {
@@ -929,7 +932,6 @@
   #cnt6 {
     height: 1000px;
     margin-bottom: 190px;
-    border: 1px solid #000;
     position: relative;
 
     .titleBox {
@@ -956,6 +958,12 @@
           width: 700px;
           flex: 0 0 auto;
           margin: 0 13px;
+          
+
+          &:nth-of-type(1) .img{background: url(../images/goon.jpg);}
+          &:nth-of-type(2) .img{background: url(../images/roundupsports.jpg);}
+          &:nth-of-type(3) .img{background: url(../images/winner.jpg);}
+          &:nth-of-type(4) .img{background: url(../images/J70Yacht.jpg);}
         }
 
         section {
@@ -965,10 +973,10 @@
           a {
             display: block;
             height: 100%;
-
+box-shadow: $shadow;
             .img {
               height: 70%;
-              border: 1px solid #000;
+              background: no-repeat 100% / cover;
             }
 
             .txt {
@@ -1005,9 +1013,6 @@
 
       list-style: none;
 
-      border: 1px solid silver;
-
-
       display: flex;
       flex-flow: row wrap;
     }
@@ -1037,13 +1042,13 @@
 
     .title {
 
-      color: #fff !important;
+      color: #fff ;
       width: 100%;
       box-sizing: border-box;
       height: 200px;
 
       h2 {
-        color: #fff !important;
+        color: #fff;
 
         &::after {
           background: #fff;
@@ -1114,6 +1119,7 @@
               line-height: 55px;
 
             }
+            p.blk{color: $midnight;}
           }
         }
       }
@@ -1236,23 +1242,26 @@
   color: #fff;font-family: "Raleway", sans-serif;font-size:14px;
   
   .info {
-    height: 580px;
-    background: rgba(208, 16, 16, 0.172);
+    height: 450px;
+    background: $silkynight;
     box-sizing: border-box;
-    padding: 75px 210px 135px;
-    h2{font-size: 19px;font-weight: 500;margin-bottom: 20px;position: relative;
-    &::after{content: ""; display: block; height: 2px; width: 10px; position: absolute; 
-      bottom: -10px; color: $wine;
+    padding: 75px 210px 70px;
+    h2{font-size: 20px;font-weight: 500;margin-bottom: 20px; position: relative;
+    &::after{content: ""; display: block; height: 3px; width: 22px; position: absolute; bottom: 0; left: 0;
+      bottom: -10px; background: $wine;
       left: 0;}}
+      .pNum{display: block; font-size: 22px;text-decoration: underline;letter-spacing: normal;cursor: pointer;margin-top: 7px;}
     div {
       width: 100%;
       height: 100%;
-      border: 1px solid #000;
       position: relative;
 
       .logo {
         display: block;
-        height: 70%;
+        position: relative;
+        top: -40px;
+        left: 60px;
+        height: 100%;
         width: 300px;
         background: url(../images/1x/footer-logo.png) no-repeat 100% / cover;
       }
@@ -1262,11 +1271,10 @@
       display: flex;
       width: 67%;
       height: 100%;
-      border: 1px solid #000;
       position: absolute;
       top: 0;
       right: 0;
-      li{width: 200px;border: 1px solid #000;margin-right: 100px;}
+      li{width: 300px;margin-right: 30px;}
     }
 
     .sns-menu {
@@ -1275,11 +1283,15 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      border: 1px solid #000;
+      display: flex;
+      li{width: 53px;height: 53px; margin-right: 35px;
+      a{display: block; width: 100%;height: 100%; border-radius: 50%; background: $wine;
+      &:hover, &:focus{background: $wine-hover; }}}
     }
   }
 
   .copyR {
+    background: $midnight;
     letter-spacing: 2.5px;
     line-height: 30px;
     
@@ -1299,17 +1311,23 @@
     .right {
       float: right;
       display: flex;
-
-      ul {
+height: 100%;
+      ul { margin-right: 70px;
         display: flex;
         height: 100%;
         width: 50%;
+        li{margin-right: 20px;}
       }
 
       >a {
         display: block;
-        width: 140px;
-        border: 1px solid #000;
+        width: 160px;
+        height: 25px;
+        margin: 28px 0 ;
+        background: url(../images/last.svg) no-repeat 100% / cover;
+        opacity: 0.9;
+        box-sizing: border-box;
+        border-radius: 5px;
       }
     }
 
