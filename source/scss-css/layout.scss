@@ -1028,7 +1028,8 @@ box-shadow: $shadow;
       align-content: flex-end;
     }
 
-
+    .btnBox{position: absolute; left: 300px;bottom: 120px;}
+    .moreBtn{position: absolute; left: 550px;bottom: 135px;}
   }
 
   #cnt7 {

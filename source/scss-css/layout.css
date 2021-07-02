@@ -770,6 +770,14 @@ vw-calc770(태블릿 사이즈size) {
     #PageBodyWraper #cnt6 .center {
       -webkit-align-content: flex-end;
       align-content: flex-end; }
+    #PageBodyWraper #cnt6 .btnBox {
+      position: absolute;
+      left: 300px;
+      bottom: 120px; }
+    #PageBodyWraper #cnt6 .moreBtn {
+      position: absolute;
+      left: 550px;
+      bottom: 135px; }
   #PageBodyWraper #cnt7 {
     background: #395061;
     /* 원본디자인 픽셀 그대로 가져오기 : 풋터까지 다 만들고 마지막에 제어 */
