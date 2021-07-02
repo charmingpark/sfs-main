@@ -786,52 +786,52 @@ vw-calc770(태블릿 사이즈size) {
         color: #fff; }
         #PageBodyWraper #cnt7 .title h2::after {
           background: #fff; }
-    #PageBodyWraper #cnt7 article {
+    #PageBodyWraper #cnt7 article.view {
       width: 100%;
       overflow: hidden;
       height: 570px;
       position: relative; }
-      #PageBodyWraper #cnt7 article ul {
+      #PageBodyWraper #cnt7 article.view ul {
         height: 100%;
         flex: 0 0 auto;
         position: absolute;
         left: -565px;
         display: flex;
         justify-content: space-between; }
-        #PageBodyWraper #cnt7 article ul li {
+        #PageBodyWraper #cnt7 article.view ul li {
           height: 100%;
           width: 950px;
           margin: 0 30px;
           box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; }
-          #PageBodyWraper #cnt7 article ul li a {
+          #PageBodyWraper #cnt7 article.view ul li a {
             display: block;
             width: 100%;
             height: 100%;
             display: flex; }
-          #PageBodyWraper #cnt7 article ul li .img {
+          #PageBodyWraper #cnt7 article.view ul li .img {
             width: 60%;
             height: 100%;
             box-sizing: border-box;
             background: no-repeat 100% / cover; }
-          #PageBodyWraper #cnt7 article ul li:nth-of-type(1) .img {
+          #PageBodyWraper #cnt7 article.view ul li:nth-of-type(1) .img {
             background-image: url(../images/cnt71.jpg); }
-          #PageBodyWraper #cnt7 article ul li:nth-of-type(2) .img {
+          #PageBodyWraper #cnt7 article.view ul li:nth-of-type(2) .img {
             background-image: url(../images/cnt74-1.jpg); }
-          #PageBodyWraper #cnt7 article ul li:nth-of-type(3) .img {
+          #PageBodyWraper #cnt7 article.view ul li:nth-of-type(3) .img {
             background-image: url(../images/cnt72.jpg); }
-          #PageBodyWraper #cnt7 article ul li:nth-of-type(4) .img {
+          #PageBodyWraper #cnt7 article.view ul li:nth-of-type(4) .img {
             background-image: url(../images/cnt74.jpg); }
-          #PageBodyWraper #cnt7 article ul li .txtBox {
+          #PageBodyWraper #cnt7 article.view ul li .txtBox {
             width: 40%;
             height: 100%;
             background: #fff;
             box-sizing: border-box;
             padding: 30px 40px;
             position: relative; }
-            #PageBodyWraper #cnt7 article ul li .txtBox h3 {
+            #PageBodyWraper #cnt7 article.view ul li .txtBox h3 {
               font-size: 30px;
               line-height: 55px; }
-            #PageBodyWraper #cnt7 article ul li .txtBox p.blk {
+            #PageBodyWraper #cnt7 article.view ul li .txtBox p.blk {
               color: #395061; }
     #PageBodyWraper #cnt7 .sliderBtn {
       position: absolute;
