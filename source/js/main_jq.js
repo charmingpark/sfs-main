@@ -207,6 +207,37 @@ $(function () {
 // 		$('.logo a').focus();
 // 	});
 
+$('.prev').on('click', function () {
+	const $cnt = $(this).parents('.cnt');
+	const $view = $cnt.find('article.view');
+	const $sliderUl = $('$cnt .visual ul');
+	const oneSize = $sliderUl.children().outerWidth(true); /* = onceMove 1개씩만 움직임 */
+
+	if ($sliderUl.is(':animated')) return false;
+	$sliderUl.prepend($sliderUl.children().last().clone()).css('marginLeft', -oneSize).animate({marginLeft: 0}, 1000, function () {
+		$(this).children().last().remove();
+		ariaHidden();
+	});
+});
+
+$('.next').on('click', function () {
+	if ($sliderUl.is(':animated')) return false;
+	$sliderUl.append($sliderUl.children().first().clone()).animate({marginLeft: -400}, 1000, function () {
+		$(this).css('marginLeft', 0).children().first().remove();
+		ariaHidden();
+	});
+});
+
+// 접근성 추가
+function ariaHidden() {
+	// 1) 모든 li를 aria-hidden: true 속성 설정
+	$sliderUl.children().attr('aria-hidden', true);
+	// 2) 앞에서 부터 3개만 aria-hidden: false로 바꾸기 .slice(시작인덱스, 종료인덱스) 종료인덱스 자신은 포함하지 않음
+	$sliderUl.children().slice(0, 1).attr('aria-hidden', false);
+}
+ariaHidden();
+
+
 	// top버튼 이동
 	$('.btn_top').on('click', function () {
 		fullpage_api.moveTo(1); //본문1의 위치로 자동 이동시키기
