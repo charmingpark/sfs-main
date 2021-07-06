@@ -754,6 +754,7 @@
         height: 45px;
         position: relative;
         margin: 13px 0;
+        *{box-sizing: border-box;}
       }
 
       button {
@@ -763,7 +764,6 @@
         position: relative;
         color: $wine;
         text-align: left;
-        box-sizing: border-box;
         padding: 0 15px;
 
         &:hover,
@@ -782,24 +782,27 @@
           border-top: 8px solid $silkynight;
           border-right: 8px solid transparent;
           border-left: 8px solid transparent;
+
+          //:hover {@include transition (0.5s)  + transform rotate(180deg)
         }
       }
 
-      ul {
-        display: none;
+      .Grade ul, .Professor ul {
         position: absolute;
-        left: 0;
-        top: 52px;
+        top: 0; bottom: 0;
+        padding: 0 15px;
         width: 300px;
         height: auto;
+
+        border: 1px solid $silkynight;
       }
 
       li {
         width: 300px;
         height: 45px;
-        box-sizing: border-box;
         padding: 0 15px;
-        background: rgb(88, 157, 102);
+        border: 1px solid $silkynight;
+        border-top: none;
       }
 
       a {
@@ -1265,6 +1268,7 @@ box-shadow: $shadow;
     
     font-weight: 800;
     text-transform: uppercase;
+    overflow: hidden;
 
     height: 85px;
     line-height: 85px;
