@@ -1036,7 +1036,10 @@ vw-calc770(태블릿 사이즈size) {
 .md_cnt {
   visibility: hidden; }
 
-@media (min-width: 600px) {
+@media (max-width: 1700px) {
+  #Footer .copyR {
+    font-size: 10px; } }
+@media (max-width: 600px) {
   .headerTop {
     padding-left: 20px; } }
 

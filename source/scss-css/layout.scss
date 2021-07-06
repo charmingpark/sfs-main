@@ -1342,9 +1342,13 @@ height: 100%;
 
 
 
-@media (min-width: 1320px) {}
+@media (max-width: 1700px) {
+  #Footer .copyR {font-size: 10px;}
 
-@media (min-width: 600px) {
+}
+@media (max-width: 1320px) {}
+
+@media (max-width: 600px) {
   .headerTop {
     padding-left: 20px;
   }
