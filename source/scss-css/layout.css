@@ -993,6 +993,7 @@ vw-calc770(태블릿 사이즈size) {
     font-weight: 800;
     text-transform: uppercase;
     overflow: hidden;
+    font-size: 10px;
     height: 85px;
     line-height: 85px;
     box-sizing: border-box;
@@ -1036,9 +1037,13 @@ vw-calc770(태블릿 사이즈size) {
 .md_cnt {
   visibility: hidden; }
 
-@media (max-width: 1700px) {
-  #Footer .copyR {
-    font-size: 10px; } }
+@media (max-width: 1660px) {
+  #cnt1 .titleBox {
+    min-width: none;
+    width: 29%; }
+
+  #cnt1 article.view {
+    width: 1660px; } }
 @media (max-width: 600px) {
   .headerTop {
     padding-left: 20px; } }
