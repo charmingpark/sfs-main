@@ -788,6 +788,7 @@
       }
 
       .Grade ul, .Professor ul {
+        display: none;
         position: absolute;
         top: 0; bottom: 0;
         padding: 0 15px;
