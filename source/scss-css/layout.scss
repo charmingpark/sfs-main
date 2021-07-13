@@ -1271,6 +1271,7 @@ box-shadow: $shadow;
     text-transform: uppercase;
     overflow: hidden;
 
+    font-size: 10px;
     height: 85px;
     line-height: 85px;
     box-sizing: border-box;
@@ -1314,7 +1315,6 @@ height: 100%;
 .md_cnt {
   position: fixed;
   z-index: 1000;
-
 }
 
 #dim {
@@ -1343,9 +1343,9 @@ height: 100%;
 
 
 
-@media (max-width: 1700px) {
-  #Footer .copyR {font-size: 10px;}
-
+@media (max-width: 1660px) {
+  #cnt1 .titleBox {min-width: none; width: 29%;}
+  #cnt1 article.view{width: 1660px}
 }
 @media (max-width: 1320px) {}
 
